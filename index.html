@@ -14,30 +14,182 @@
         <div class="main-container">
             <div class="tre-container">
                 <h2>Tre</h2>
-                <div class="forms">
-                    <h3>Surf</h3>
+                <div class="form-container">
+                    <form id="treForm">
+                        <label for="tre-first">First:</label>
+                        <select id="tre-first" name="first" onchange="calculateTotals()">
+                            <option value="1">1</option>
+                            <!-- Additional options to be added later -->
+                        </select>
+                        <br>
+                        <label for="tre-second">Second:</label>
+                        <select id="tre-second" name="second" onchange="calculateTotals()">
+                            <option value="1">1</option>
+                            <!-- Additional options to be added later -->
+                        </select>
+                        <br>
+                        <label for="tre-third">Third:</label>
+                        <select id="tre-third" name="third" onchange="calculateTotals()">
+                            <option value="1">1</option>
+                            <!-- Additional options to be added later -->
+                        </select>
+                        <br>
+                        <label for="tre-fourth">Fourth:</label>
+                        <select id="tre-fourth" name="fourth" onchange="calculateTotals()">
+                            <option value="1">1</option>
+                            <!-- Additional options to be added later -->
+                        </select>
+                    </form>
+                    <div class="total-box">
+                        Total Sum: <span id="tre-totalSum">0</span>
+                    </div>
+                    <div class="difference-box" id="tre-difference"></div>
                 </div>
             </div>
             <div class="telia-container">
                 <h2>Telia</h2>
-                <div class="forms">
-                    <h3>Surf</h3>
+                <div class="form-container">
+                    <form id="teliaForm">
+                        <label for="telia-first">First:</label>
+                        <select id="telia-first" name="first" onchange="calculateTotals()">
+                            <option value="1">1</option>
+                            <!-- Additional options to be added later -->
+                        </select>
+                        <br>
+                        <label for="telia-second">Second:</label>
+                        <select id="telia-second" name="second" onchange="calculateTotals()">
+                            <option value="1">1</option>
+                            <!-- Additional options to be added later -->
+                        </select>
+                        <br>
+                        <label for="telia-third">Third:</label>
+                        <select id="telia-third" name="third" onchange="calculateTotals()">
+                            <option value="1">1</option>
+                            <!-- Additional options to be added later -->
+                        </select>
+                        <br>
+                        <label for="telia-fourth">Fourth:</label>
+                        <select id="telia-fourth" name="fourth" onchange="calculateTotals()">
+                            <option value="1">1</option>
+                            <!-- Additional options to be added later -->
+                        </select>
+                    </form>
+                    <div class="total-box">
+                        Total Sum: <span id="telia-totalSum">0</span>
+                    </div>
+                    <div class="difference-box" id="telia-difference">Difference from Tre: <span id="telia-difference-value">0</span></div>
                 </div>
             </div>
             <div class="tele2-container">
                 <h2>Tele2</h2>
-                <div class="forms">
-                    <h3>Surf</h3>
+                <div class="form-container">
+                    <form id="tele2Form">
+                        <label for="tele2-first">First:</label>
+                        <select id="tele2-first" name="first" onchange="calculateTotals()">
+                            <option value="1">1</option>
+                            <!-- Additional options to be added later -->
+                        </select>
+                        <br>
+                        <label for="tele2-second">Second:</label>
+                        <select id="tele2-second" name="second" onchange="calculateTotals()">
+                            <option value="1">1</option>
+                            <!-- Additional options to be added later -->
+                        </select>
+                        <br>
+                        <label for="tele2-third">Third:</label>
+                        <select id="tele2-third" name="third" onchange="calculateTotals()">
+                            <option value="1">1</option>
+                            <!-- Additional options to be added later -->
+                        </select>
+                        <br>
+                        <label for="tele2-fourth">Fourth:</label>
+                        <select id="tele2-fourth" name="fourth" onchange="calculateTotals()">
+                            <option value="1">1</option>
+                            <!-- Additional options to be added later -->
+                        </select>
+                    </form>
+                    <div class="total-box">
+                        Total Sum: <span id="tele2-totalSum">0</span>
+                    </div>
+                    <div class="difference-box" id="tele2-difference">Difference from Tre: <span id="tele2-difference-value">0</span></div>
                 </div>
             </div>
             <div class="telenor-container">
                 <h2>Telenor</h2>
-                <div class="forms">
-                    <h3>Surf</h3>
+                <div class="form-container">
+                    <form id="telenorForm">
+                        <label for="telenor-first">First:</label>
+                        <select id="telenor-first" name="first" onchange="calculateTotals()">
+                            <option value="1">1</option>
+                            <!-- Additional options to be added later -->
+                        </select>
+                        <br>
+                        <label for="telenor-second">Second:</label>
+                        <select id="telenor-second" name="second" onchange="calculateTotals()">
+                            <option value="1">1</option>
+                            <!-- Additional options to be added later -->
+                        </select>
+                        <br>
+                        <label for="telenor-third">Third:</label>
+                        <select id="telenor-third" name="third" onchange="calculateTotals()">
+                            <option value="1">1</option>
+                            <!-- Additional options to be added later -->
+                        </select>
+                        <br>
+                        <label for="telenor-fourth">Fourth:</label>
+                        <select id="telenor-fourth" name="fourth" onchange="calculateTotals()">
+                            <option value="1">1</option>
+                            <!-- Additional options to be added later -->
+                        </select>
+                    </form>
+                    <div class="total-box">
+                        Total Sum: <span id="telenor-totalSum">0</span>
+                    </div>
+                    <div class="difference-box" id="telenor-difference">Difference from Tre: <span id="telenor-difference-value">0</span></div>
                 </div>
             </div>
         </div>
+        <button onclick="resetForms()">Reset</button>
     </main>
     <footer></footer>
+
+    <script>
+        function calculateTotal(containerId) {
+            const firstValue = parseInt(document.getElementById(containerId + '-first').value);
+            const secondValue = parseInt(document.getElementById(containerId + '-second').value);
+            const thirdValue = parseInt(document.getElementById(containerId + '-third').value);
+            const fourthValue = parseInt(document.getElementById(containerId + '-fourth').value);
+
+            return firstValue + secondValue + thirdValue + fourthValue;
+        }
+
+        function calculateTotals() {
+            const treTotal = calculateTotal('tre');
+            document.getElementById('tre-totalSum').textContent = treTotal;
+
+            const teliaTotal = calculateTotal('telia');
+            document.getElementById('telia-totalSum').textContent = teliaTotal;
+            document.getElementById('telia-difference-value').textContent = teliaTotal - treTotal;
+
+            const tele2Total = calculateTotal('tele2');
+            document.getElementById('tele2-totalSum').textContent = tele2Total;
+            document.getElementById('tele2-difference-value').textContent = tele2Total - treTotal;
+
+            const telenorTotal = calculateTotal('telenor');
+            document.getElementById('telenor-totalSum').textContent = telenorTotal;
+            document.getElementById('telenor-difference-value').textContent = telenorTotal - treTotal;
+        }
+
+        function resetForms() {
+            document.getElementById('treForm').reset();
+            document.getElementById('teliaForm').reset();
+            document.getElementById('tele2Form').reset();
+            document.getElementById('telenorForm').reset();
+            calculateTotals();
+        }
+
+        // Initial calculation to set default sums
+        calculateTotals();
+    </script>
 </body>
 </html>

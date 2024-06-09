@@ -37,3 +37,7 @@ main, footer {
     color: var(--aqua);
     font-size: 2rem;
 }
+
+.forms {
+    border: 2px solid blue;
+}
