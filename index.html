@@ -16,32 +16,42 @@
                 <h2>Tre</h2>
                 <div class="form-container">
                     <form id="treForm">
-                        <label for="tre-first">First:</label>
+                        <label for="tre-first">Surf:</label>
                         <select id="tre-first" name="first" onchange="calculateTotals()">
-                            <option value="1">1</option>
-                            <!-- Additional options to be added later -->
+                            <option value="0">-</option>
+                            <option value="169">5GB</option>
+                            <option value="199">20GB</option>
+                            <option value="329">OBEG</option>
                         </select>
                         <br>
-                        <label for="tre-second">Second:</label>
+                        <label for="tre-second">Extra användare:</label>
                         <select id="tre-second" name="second" onchange="calculateTotals()">
-                            <option value="1">1</option>
-                            <!-- Additional options to be added later -->
+                            <option value="0">-</option>
+                            <option value="129">1</option>
+                            <option value="258">2</option>
+                            <option value="387">3</option>
+                            <option value="516">4</option>
+                            <option value="645">5</option>
                         </select>
                         <br>
-                        <label for="tre-third">Third:</label>
+                        <label for="tre-third">Bredband:</label>
                         <select id="tre-third" name="third" onchange="calculateTotals()">
-                            <option value="1">1</option>
-                            <!-- Additional options to be added later -->
+                            <option value="0">-</option>
+                            <option value="399">150Mbit utan rabatt</option>
+                            <option value="499">1GB utan rabatt</option>
+                            <option value="229">150Mbit med rabatt</option>
+                            <option value="329">1GB med rabatt</option>
                         </select>
                         <br>
-                        <label for="tre-fourth">Fourth:</label>
+                        <label for="tre-fourth">Zyxel:</label>
                         <select id="tre-fourth" name="fourth" onchange="calculateTotals()">
-                            <option value="1">1</option>
-                            <!-- Additional options to be added later -->
+                            <option value="0">-</option>
+                            <option value="70">Zyxel In</option>
+                            <option value="120">Zyxel Out</option>
                         </select>
                     </form>
                     <div class="total-box">
-                        Total Sum: <span id="tre-totalSum">0</span>
+                        Månadskostnad: <span id="tre-totalSum">0</span>
                     </div>
                     <div class="difference-box" id="tre-difference"></div>
                 </div>
@@ -50,102 +60,89 @@
                 <h2>Telia</h2>
                 <div class="form-container">
                     <form id="teliaForm">
-                        <label for="telia-first">First:</label>
+                        <label for="telia-first">Surf:</label>
                         <select id="telia-first" name="first" onchange="calculateTotals()">
-                            <option value="1">1</option>
-                            <!-- Additional options to be added later -->
+                            <option value="0">-</option>
+                            <option value="229">3GB</option>
+                            <option value="389">15GB</option>
+                            <option value="489">40GB</option>
+                            <option value="569">OBEG</option>
                         </select>
                         <br>
-                        <label for="telia-second">Second:</label>
+                        <label for="telia-second">Extra användare:</label>
                         <select id="telia-second" name="second" onchange="calculateTotals()">
-                            <option value="1">1</option>
-                            <!-- Additional options to be added later -->
-                        </select>
-                        <br>
-                        <label for="telia-third">Third:</label>
-                        <select id="telia-third" name="third" onchange="calculateTotals()">
-                            <option value="1">1</option>
-                            <!-- Additional options to be added later -->
-                        </select>
-                        <br>
-                        <label for="telia-fourth">Fourth:</label>
-                        <select id="telia-fourth" name="fourth" onchange="calculateTotals()">
-                            <option value="1">1</option>
-                            <!-- Additional options to be added later -->
+                            <option value="0">-</option>
+                            <option value="219">1</option>
+                            <option value="438">2</option>
+                            <option value="657">3</option>
+                            <option value="876">4</option>
+                            <option value="1095">5</option>
                         </select>
                     </form>
                     <div class="total-box">
-                        Total Sum: <span id="telia-totalSum">0</span>
+                        Månadskostnad: <span id="telia-totalSum">0</span>
                     </div>
                     <div class="difference-box" id="telia-difference">Difference from Tre: <span id="telia-difference-value">0</span></div>
+                    <div class="difference-box">Difference from Tre * 24: <span id="telia-difference-value-24">0</span></div>
                 </div>
             </div>
             <div class="tele2-container">
                 <h2>Tele2</h2>
                 <div class="form-container">
                     <form id="tele2Form">
-                        <label for="tele2-first">First:</label>
+                        <label for="tele2-first">Surf:</label>
                         <select id="tele2-first" name="first" onchange="calculateTotals()">
-                            <option value="1">1</option>
-                            <!-- Additional options to be added later -->
+                            <option value="0">-</option>
+                            <option value="249">5GB</option>
+                            <option value="299">15GB</option>
+                            <option value="399">OBEG</option>
                         </select>
                         <br>
-                        <label for="tele2-second">Second:</label>
+                        <label for="tele2-second">Extra användare:</label>
                         <select id="tele2-second" name="second" onchange="calculateTotals()">
-                            <option value="1">1</option>
-                            <!-- Additional options to be added later -->
-                        </select>
-                        <br>
-                        <label for="tele2-third">Third:</label>
-                        <select id="tele2-third" name="third" onchange="calculateTotals()">
-                            <option value="1">1</option>
-                            <!-- Additional options to be added later -->
-                        </select>
-                        <br>
-                        <label for="tele2-fourth">Fourth:</label>
-                        <select id="tele2-fourth" name="fourth" onchange="calculateTotals()">
-                            <option value="1">1</option>
-                            <!-- Additional options to be added later -->
+                            <option value="0">-</option>
+                            <option value="199">1</option>
+                            <option value="398">2</option>
+                            <option value="597">3</option>
+                            <option value="796">4</option>
+                            <option value="995">5</option>
                         </select>
                     </form>
                     <div class="total-box">
-                        Total Sum: <span id="tele2-totalSum">0</span>
+                        Månadskostnad: <span id="tele2-totalSum">0</span>
                     </div>
                     <div class="difference-box" id="tele2-difference">Difference from Tre: <span id="tele2-difference-value">0</span></div>
+                    <div class="difference-box">Difference from Tre * 24: <span id="tele2-difference-value-24">0</span></div>
                 </div>
             </div>
             <div class="telenor-container">
                 <h2>Telenor</h2>
                 <div class="form-container">
                     <form id="telenorForm">
-                        <label for="telenor-first">First:</label>
+                        <label for="telenor-first">Surf:</label>
                         <select id="telenor-first" name="first" onchange="calculateTotals()">
-                            <option value="1">1</option>
-                            <!-- Additional options to be added later -->
+                            <option value="0">-</option>
+                            <option value="229">5GB</option>
+                            <option value="299">15GB</option>
+                            <option value="399">35GB</option>
+                            <option value="449">OBEG</option>
                         </select>
                         <br>
-                        <label for="telenor-second">Second:</label>
+                        <label for="telenor-second">Extra användare:</label>
                         <select id="telenor-second" name="second" onchange="calculateTotals()">
-                            <option value="1">1</option>
-                            <!-- Additional options to be added later -->
-                        </select>
-                        <br>
-                        <label for="telenor-third">Third:</label>
-                        <select id="telenor-third" name="third" onchange="calculateTotals()">
-                            <option value="1">1</option>
-                            <!-- Additional options to be added later -->
-                        </select>
-                        <br>
-                        <label for="telenor-fourth">Fourth:</label>
-                        <select id="telenor-fourth" name="fourth" onchange="calculateTotals()">
-                            <option value="1">1</option>
-                            <!-- Additional options to be added later -->
+                            <option value="0">-</option>
+                            <option value="219">1</option>
+                            <option value="438">2</option>
+                            <option value="657">3</option>
+                            <option value="876">4</option>
+                            <option value="1095">5</option>
                         </select>
                     </form>
                     <div class="total-box">
-                        Total Sum: <span id="telenor-totalSum">0</span>
+                        Månadskostnad: <span id="telenor-totalSum">0</span>
                     </div>
                     <div class="difference-box" id="telenor-difference">Difference from Tre: <span id="telenor-difference-value">0</span></div>
+                    <div class="difference-box">Difference from Tre * 24: <span id="telenor-difference-value-24">0</span></div>
                 </div>
             </div>
         </div>
@@ -155,12 +152,15 @@
 
     <script>
         function calculateTotal(containerId) {
-            const firstValue = parseInt(document.getElementById(containerId + '-first').value);
-            const secondValue = parseInt(document.getElementById(containerId + '-second').value);
-            const thirdValue = parseInt(document.getElementById(containerId + '-third').value);
-            const fourthValue = parseInt(document.getElementById(containerId + '-fourth').value);
-
-            return firstValue + secondValue + thirdValue + fourthValue;
+            const elements = [
+                document.getElementById(containerId + '-first'),
+                document.getElementById(containerId + '-second'),
+                document.getElementById(containerId + '-third'),
+                document.getElementById(containerId + '-fourth')
+            ];
+            return elements.reduce((sum, element) => {
+                return sum + (element ? parseInt(element.value) : 0);
+            }, 0);
         }
 
         function calculateTotals() {
@@ -168,16 +168,22 @@
             document.getElementById('tre-totalSum').textContent = treTotal;
 
             const teliaTotal = calculateTotal('telia');
+            const teliaDifference = teliaTotal - treTotal;
             document.getElementById('telia-totalSum').textContent = teliaTotal;
-            document.getElementById('telia-difference-value').textContent = teliaTotal - treTotal;
+            document.getElementById('telia-difference-value').textContent = teliaDifference;
+            document.getElementById('telia-difference-value-24').textContent = teliaDifference * 24;
 
             const tele2Total = calculateTotal('tele2');
+            const tele2Difference = tele2Total - treTotal;
             document.getElementById('tele2-totalSum').textContent = tele2Total;
-            document.getElementById('tele2-difference-value').textContent = tele2Total - treTotal;
+            document.getElementById('tele2-difference-value').textContent = tele2Difference;
+            document.getElementById('tele2-difference-value-24').textContent = tele2Difference * 24;
 
             const telenorTotal = calculateTotal('telenor');
+            const telenorDifference = telenorTotal - treTotal;
             document.getElementById('telenor-totalSum').textContent = telenorTotal;
-            document.getElementById('telenor-difference-value').textContent = telenorTotal - treTotal;
+            document.getElementById('telenor-difference-value').textContent = telenorDifference;
+            document.getElementById('telenor-difference-value-24').textContent = telenorDifference * 24;
         }
 
         function resetForms() {
