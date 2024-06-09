@@ -54,6 +54,7 @@
                         Månadskostnad: <span id="tre-totalSum">0</span>
                     </div>
                     <div class="difference-box" id="tre-difference"></div>
+                    <div class="difference-box">Kostnad för 24 månader: <span id="tre-totalSum-24">0</span></div>
                 </div>
             </div>
             <div class="telia-container">
@@ -82,8 +83,8 @@
                     <div class="total-box">
                         Månadskostnad: <span id="telia-totalSum">0</span>
                     </div>
-                    <div class="difference-box" id="telia-difference">Difference from Tre: <span id="telia-difference-value">0</span></div>
-                    <div class="difference-box">Difference from Tre * 24: <span id="telia-difference-value-24">0</span></div>
+                    <div class="difference-box" id="telia-difference">Diff en månad: <span id="telia-difference-value">0</span></div>
+                    <div class="difference-box">Diff 24 månader: <span id="telia-difference-value-24">0</span></div>
                 </div>
             </div>
             <div class="tele2-container">
@@ -111,8 +112,8 @@
                     <div class="total-box">
                         Månadskostnad: <span id="tele2-totalSum">0</span>
                     </div>
-                    <div class="difference-box" id="tele2-difference">Difference from Tre: <span id="tele2-difference-value">0</span></div>
-                    <div class="difference-box">Difference from Tre * 24: <span id="tele2-difference-value-24">0</span></div>
+                    <div class="difference-box" id="tele2-difference">Diff en månad: <span id="tele2-difference-value">0</span></div>
+                    <div class="difference-box">Diff 24 månader: <span id="tele2-difference-value-24">0</span></div>
                 </div>
             </div>
             <div class="telenor-container">
@@ -141,8 +142,8 @@
                     <div class="total-box">
                         Månadskostnad: <span id="telenor-totalSum">0</span>
                     </div>
-                    <div class="difference-box" id="telenor-difference">Difference from Tre: <span id="telenor-difference-value">0</span></div>
-                    <div class="difference-box">Difference from Tre * 24: <span id="telenor-difference-value-24">0</span></div>
+                    <div class="difference-box" id="telenor-difference">Diff en månad: <span id="telenor-difference-value">0</span></div>
+                    <div class="difference-box">Diff 24 månader: <span id="telenor-difference-value-24">0</span></div>
                 </div>
             </div>
         </div>
@@ -152,50 +153,51 @@
 
     <script>
         function calculateTotal(containerId) {
-            const elements = [
-                document.getElementById(containerId + '-first'),
-                document.getElementById(containerId + '-second'),
-                document.getElementById(containerId + '-third'),
-                document.getElementById(containerId + '-fourth')
-            ];
-            return elements.reduce((sum, element) => {
-                return sum + (element ? parseInt(element.value) : 0);
-            }, 0);
-        }
+    const elements = [
+        document.getElementById(containerId + '-first'),
+        document.getElementById(containerId + '-second'),
+        document.getElementById(containerId + '-third'),
+        document.getElementById(containerId + '-fourth')
+    ];
+    return elements.reduce((sum, element) => {
+        return sum + (element ? parseInt(element.value) : 0);
+    }, 0);
+}
 
-        function calculateTotals() {
-            const treTotal = calculateTotal('tre');
-            document.getElementById('tre-totalSum').textContent = treTotal;
+function calculateTotals() {
+    const treTotal = calculateTotal('tre');
+    document.getElementById('tre-totalSum').textContent = treTotal;
+    document.getElementById('tre-totalSum-24').textContent = treTotal * 24;
 
-            const teliaTotal = calculateTotal('telia');
-            const teliaDifference = teliaTotal - treTotal;
-            document.getElementById('telia-totalSum').textContent = teliaTotal;
-            document.getElementById('telia-difference-value').textContent = teliaDifference;
-            document.getElementById('telia-difference-value-24').textContent = teliaDifference * 24;
+    const teliaTotal = calculateTotal('telia');
+    const teliaDifference = teliaTotal - treTotal;
+    document.getElementById('telia-totalSum').textContent = teliaTotal;
+    document.getElementById('telia-difference-value').textContent = teliaDifference;
+    document.getElementById('telia-difference-value-24').textContent = teliaDifference * 24;
 
-            const tele2Total = calculateTotal('tele2');
-            const tele2Difference = tele2Total - treTotal;
-            document.getElementById('tele2-totalSum').textContent = tele2Total;
-            document.getElementById('tele2-difference-value').textContent = tele2Difference;
-            document.getElementById('tele2-difference-value-24').textContent = tele2Difference * 24;
+    const tele2Total = calculateTotal('tele2');
+    const tele2Difference = tele2Total - treTotal;
+    document.getElementById('tele2-totalSum').textContent = tele2Total;
+    document.getElementById('tele2-difference-value').textContent = tele2Difference;
+    document.getElementById('tele2-difference-value-24').textContent = tele2Difference * 24;
 
-            const telenorTotal = calculateTotal('telenor');
-            const telenorDifference = telenorTotal - treTotal;
-            document.getElementById('telenor-totalSum').textContent = telenorTotal;
-            document.getElementById('telenor-difference-value').textContent = telenorDifference;
-            document.getElementById('telenor-difference-value-24').textContent = telenorDifference * 24;
-        }
+    const telenorTotal = calculateTotal('telenor');
+    const telenorDifference = telenorTotal - treTotal;
+    document.getElementById('telenor-totalSum').textContent = telenorTotal;
+    document.getElementById('telenor-difference-value').textContent = telenorDifference;
+    document.getElementById('telenor-difference-value-24').textContent = telenorDifference * 24;
+}
 
-        function resetForms() {
-            document.getElementById('treForm').reset();
-            document.getElementById('teliaForm').reset();
-            document.getElementById('tele2Form').reset();
-            document.getElementById('telenorForm').reset();
-            calculateTotals();
-        }
+function resetForms() {
+    document.getElementById('treForm').reset();
+    document.getElementById('teliaForm').reset();
+    document.getElementById('tele2Form').reset();
+    document.getElementById('telenorForm').reset();
+    calculateTotals();
+}
 
-        // Initial calculation to set default sums
-        calculateTotals();
+// Initial calculation to set default sums
+calculateTotals();
     </script>
 </body>
 </html>
