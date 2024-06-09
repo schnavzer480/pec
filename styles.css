@@ -38,6 +38,14 @@ main, footer {
     font-size: 2rem;
 }
 
-.forms {
-    border: 2px solid blue;
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+h2 {
+    margin-bottom: 3rem;
 }
