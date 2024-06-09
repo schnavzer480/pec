@@ -80,6 +80,10 @@
                             <option value="1095">5</option>
                         </select>
                     </form>
+                    <div class="form-container">
+                        <label for="telia-extra">Extra kostnad:</label>
+                        <input type="number" id="telia-extra" name="extra" placeholder="Ngn fucking rabatt" oninput="updateCost('telia')">
+                    </div>
                     <div class="total-box">
                         Månadskostnad: <span id="telia-totalSum">0</span>
                     </div>
@@ -87,6 +91,7 @@
                     <div class="difference-box">Diff 24 månader: <span id="telia-difference-value-24">0</span></div>
                 </div>
             </div>
+    
             <div class="tele2-container">
                 <h2>Tele2</h2>
                 <div class="form-container">
@@ -109,13 +114,19 @@
                             <option value="995">5</option>
                         </select>
                     </form>
+                    <div class="form-container">
+                    <label for="tele2-extra">Extra kostnad:</label>
+                    <input type="number" id="tele2-extra" name="extra" placeholder="Ngn fucking rabatt" oninput="updateCost('tele2')">
+                    </div>
                     <div class="total-box">
                         Månadskostnad: <span id="tele2-totalSum">0</span>
                     </div>
                     <div class="difference-box" id="tele2-difference">Diff en månad: <span id="tele2-difference-value">0</span></div>
                     <div class="difference-box">Diff 24 månader: <span id="tele2-difference-value-24">0</span></div>
                 </div>
+                
             </div>
+    
             <div class="telenor-container">
                 <h2>Telenor</h2>
                 <div class="form-container">
@@ -139,12 +150,17 @@
                             <option value="1095">5</option>
                         </select>
                     </form>
+                    <div class="form-container">
+                    <label for="telenor-extra">Extra kostnad:</label>
+                    <input type="number" id="telenor-extra" name="extra" placeholder="Ngn fucking rabatt" oninput="updateCost('telenor')">
+                    </div>
                     <div class="total-box">
                         Månadskostnad: <span id="telenor-totalSum">0</span>
                     </div>
                     <div class="difference-box" id="telenor-difference">Diff en månad: <span id="telenor-difference-value">0</span></div>
                     <div class="difference-box">Diff 24 månader: <span id="telenor-difference-value-24">0</span></div>
                 </div>
+                
             </div>
         </div>
         <button onclick="resetForms()">Reset</button>
@@ -153,51 +169,75 @@
 
     <script>
         function calculateTotal(containerId) {
-    const elements = [
-        document.getElementById(containerId + '-first'),
-        document.getElementById(containerId + '-second'),
-        document.getElementById(containerId + '-third'),
-        document.getElementById(containerId + '-fourth')
-    ];
-    return elements.reduce((sum, element) => {
-        return sum + (element ? parseInt(element.value) : 0);
-    }, 0);
-}
-
-function calculateTotals() {
+            const elements = [
+                document.getElementById(containerId + '-first'),
+                document.getElementById(containerId + '-second'),
+                document.getElementById(containerId + '-third'),
+                document.getElementById(containerId + '-fourth')
+            ];
+            return elements.reduce((sum, element) => {
+                return sum + (element ? parseInt(element.value) : 0);
+            }, 0);
+        }
+    
+    function calculateTotals() {
     const treTotal = calculateTotal('tre');
     document.getElementById('tre-totalSum').textContent = treTotal;
     document.getElementById('tre-totalSum-24').textContent = treTotal * 24;
 
     const teliaTotal = calculateTotal('telia');
-    const teliaDifference = teliaTotal - treTotal;
-    document.getElementById('telia-totalSum').textContent = teliaTotal;
+    const teliaExtra = parseInt(document.getElementById('telia-extra').value) || 0;
+    const teliaTotalWithExtra = teliaTotal + teliaExtra;
+    const teliaDifference = teliaTotalWithExtra - treTotal;
+    
+    document.getElementById('telia-totalSum').textContent = teliaTotalWithExtra;
     document.getElementById('telia-difference-value').textContent = teliaDifference;
     document.getElementById('telia-difference-value-24').textContent = teliaDifference * 24;
 
     const tele2Total = calculateTotal('tele2');
-    const tele2Difference = tele2Total - treTotal;
-    document.getElementById('tele2-totalSum').textContent = tele2Total;
+    const tele2Extra = parseInt(document.getElementById('tele2-extra').value) || 0;
+    const tele2TotalWithExtra = tele2Total + tele2Extra;
+    const tele2Difference = tele2TotalWithExtra - treTotal;
+
+    document.getElementById('tele2-totalSum').textContent = tele2TotalWithExtra;
     document.getElementById('tele2-difference-value').textContent = tele2Difference;
     document.getElementById('tele2-difference-value-24').textContent = tele2Difference * 24;
 
     const telenorTotal = calculateTotal('telenor');
-    const telenorDifference = telenorTotal - treTotal;
-    document.getElementById('telenor-totalSum').textContent = telenorTotal;
+    const telenorExtra = parseInt(document.getElementById('telenor-extra').value) || 0;
+    const telenorTotalWithExtra = telenorTotal + telenorExtra;
+    const telenorDifference = telenorTotalWithExtra - treTotal;
+
+    document.getElementById('telenor-totalSum').textContent = telenorTotalWithExtra;
     document.getElementById('telenor-difference-value').textContent = telenorDifference;
     document.getElementById('telenor-difference-value-24').textContent = telenorDifference * 24;
 }
 
-function resetForms() {
-    document.getElementById('treForm').reset();
-    document.getElementById('teliaForm').reset();
-    document.getElementById('tele2Form').reset();
-    document.getElementById('telenorForm').reset();
-    calculateTotals();
-}
 
-// Initial calculation to set default sums
-calculateTotals();
+    
+        function resetForms() {
+            document.getElementById('treForm').reset();
+            document.getElementById('teliaForm').reset();
+            document.getElementById('tele2Form').reset();
+            document.getElementById('telenorForm').reset();
+            calculateTotals();
+        }
+    
+        function updateCost(provider) {
+            const extraCostInput = document.getElementById(provider + '-extra');
+            const extraCost = parseInt(extraCostInput.value);
+            if (!isNaN(extraCost)) {
+                const currentTotal = parseInt(document.getElementById(provider + '-totalSum').textContent);
+                const newTotal = currentTotal + extraCost;
+                document.getElementById(provider + '-totalSum').textContent = newTotal;
+                calculateTotals();
+            }
+        }
+    
+        // Initial calculation to set default sums
+        calculateTotals();
     </script>
+    
+    
 </body>
 </html>
