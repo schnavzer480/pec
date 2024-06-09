@@ -8,6 +8,11 @@
     <link href="styles.css" rel="stylesheet">
     <title>Räkna med Per</title>
     <meta name="theme-color" content="#">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
 </head>
 <body>
     <main>
@@ -82,7 +87,7 @@
                     </form>
                     <div class="form-container">
                         <label for="telia-extra">Extra kostnad:</label>
-                        <input type="number" id="telia-extra" name="extra" placeholder="Ngn fucking rabatt" oninput="updateCost('telia')">
+                        <input type="number" id="telia-extra" name="extra" placeholder="Någon fucking rabatt" oninput="updateCost('telia')">
                     </div>
                     <div class="total-box">
                         Månadskostnad: <span id="telia-totalSum">0</span>
@@ -116,7 +121,7 @@
                     </form>
                     <div class="form-container">
                     <label for="tele2-extra">Extra kostnad:</label>
-                    <input type="number" id="tele2-extra" name="extra" placeholder="Ngn fucking rabatt" oninput="updateCost('tele2')">
+                    <input type="number" id="tele2-extra" name="extra" placeholder="Någon fucking rabatt" oninput="updateCost('tele2')">
                     </div>
                     <div class="total-box">
                         Månadskostnad: <span id="tele2-totalSum">0</span>
@@ -152,7 +157,7 @@
                     </form>
                     <div class="form-container">
                     <label for="telenor-extra">Extra kostnad:</label>
-                    <input type="number" id="telenor-extra" name="extra" placeholder="Ngn fucking rabatt" oninput="updateCost('telenor')">
+                    <input type="number" id="telenor-extra" name="extra" placeholder="Någon fucking rabatt" oninput="updateCost('telenor')">
                     </div>
                     <div class="total-box">
                         Månadskostnad: <span id="telenor-totalSum">0</span>
@@ -163,7 +168,6 @@
                 
             </div>
         </div>
-        <button onclick="resetForms()">Reset</button>
     </main>
     <footer></footer>
 
