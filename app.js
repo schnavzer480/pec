@@ -64,5 +64,4 @@ function updateCost(provider) {
     }
 }
 
-// Initial calculation to set default sums
 calculateTotals();
