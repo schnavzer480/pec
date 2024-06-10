@@ -51,7 +51,7 @@ main, footer {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 h2 {
@@ -62,7 +62,7 @@ h2 {
     .main-container {
         display: none;
     }
-    
+
     .hidden {
         display: block;
         text-align: center;
