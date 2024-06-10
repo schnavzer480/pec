@@ -12,6 +12,7 @@
     --black: rgb(18, 18, 18);
     --aqua: rgb(51, 187, 187);
     --red: rgb(187, 10, 10);
+    --green: rgb(19, 214, 104);
 }
 
 main, footer {
@@ -36,6 +37,9 @@ main, footer {
     border: 2px solid var(--red);
     color: var(--aqua);
     font-size: 2rem;
+}
+.tre-container {
+    border: 2px solid var(--green);
 }
 
 .form-container {

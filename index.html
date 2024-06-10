@@ -22,79 +22,81 @@
                 <h2>Tre</h2>
                 <div class="form-container">
                     <form id="treForm">
-                        <label for="tre-first">Surf:</label>
+                        <label for="tre-first">Surf:<br></label>
                         <select id="tre-first" name="first" onchange="calculateTotals()">
                             <option value="0">-</option>
-                            <option value="169">5GB</option>
-                            <option value="199">20GB</option>
-                            <option value="329">OBEG</option>
+                            <option value="169">5GB | 169sek</option>
+                            <option value="199">20GB | 199sek</option>
+                            <option value="329">OBEG | 329sek</option>
                         </select>
-                        <br>
-                        <label for="tre-second">Extra användare:</label>
+                        <br><br>
+                        <label for="tre-second">Extra användare:<br></label>
                         <select id="tre-second" name="second" onchange="calculateTotals()">
                             <option value="0">-</option>
-                            <option value="129">1</option>
-                            <option value="258">2</option>
-                            <option value="387">3</option>
-                            <option value="516">4</option>
-                            <option value="645">5</option>
+                            <option value="129">1 | 129sek</option>
+                            <option value="258">2 | 258sek</option>
+                            <option value="387">3 | 387sek</option>
+                            <option value="516">4 | 516sek</option>
+                            <option value="645">5 | 645sek</option>
                         </select>
-                        <br>
-                        <label for="tre-third">Bredband:</label>
+                        <br><br>
+                        <label for="tre-third">Bredband:<br></label>
                         <select id="tre-third" name="third" onchange="calculateTotals()">
                             <option value="0">-</option>
-                            <option value="399">150Mbit utan rabatt</option>
-                            <option value="499">1GB utan rabatt</option>
-                            <option value="229">150Mbit med rabatt</option>
-                            <option value="329">1GB med rabatt</option>
+                            <option value="399">150Mbit utan rabatt | 399sek</option>
+                            <option value="499">1GB utan rabatt | 499sek</option>
+                            <option value="229">150Mbit med rabatt | 229sek</option>
+                            <option value="329">1GB med rabatt | 329sek</option>
                         </select>
-                        <br>
-                        <label for="tre-fourth">Zyxel:</label>
+                        <br><br>
+                        <label for="tre-fourth">Zyxel:<br></label>
                         <select id="tre-fourth" name="fourth" onchange="calculateTotals()">
                             <option value="0">-</option>
-                            <option value="70">Zyxel In</option>
-                            <option value="120">Zyxel Out</option>
+                            <option value="70">Zyxel In | 70sek</option>
+                            <option value="120">Zyxel Out | 120sek</option>
                         </select>
+                        <br>
                     </form>
                     <div class="total-box">
-                        Månadskostnad: <span id="tre-totalSum">0</span>
+                        Månadskostnad:<br><span id="tre-totalSum">0</span>
                     </div>
                     <div class="difference-box" id="tre-difference"></div>
-                    <div class="difference-box">Kostnad för 24 månader: <span id="tre-totalSum-24">0</span></div>
+                    <div class="difference-box">Kostnad för 24 månader:<br><span id="tre-totalSum-24">0</span></div>
                 </div>
             </div>
             <div class="telia-container">
                 <h2>Telia</h2>
                 <div class="form-container">
                     <form id="teliaForm">
-                        <label for="telia-first">Surf:</label>
+                        <label for="telia-first">Surf:<br></label>
                         <select id="telia-first" name="first" onchange="calculateTotals()">
                             <option value="0">-</option>
-                            <option value="229">3GB</option>
-                            <option value="389">15GB</option>
-                            <option value="489">40GB</option>
-                            <option value="569">OBEG</option>
+                            <option value="229">3GB | 229sek</option>
+                            <option value="389">15GB | 389sek</option>
+                            <option value="489">40GB | 489sek</option>
+                            <option value="569">OBEG | 569sek</option>
                         </select>
-                        <br>
-                        <label for="telia-second">Extra användare:</label>
+                        <br><br>
+                        <label for="telia-second">Extra användare:<br></label>
                         <select id="telia-second" name="second" onchange="calculateTotals()">
                             <option value="0">-</option>
-                            <option value="219">1</option>
-                            <option value="438">2</option>
-                            <option value="657">3</option>
-                            <option value="876">4</option>
-                            <option value="1095">5</option>
+                            <option value="219">1 | 219sek</option>
+                            <option value="438">2 | 438sek</option>
+                            <option value="657">3 | 657sek</option>
+                            <option value="876">4 | 876sek</option>
+                            <option value="1095">5 | 1095sek</option>
                         </select>
+                        <br><br>
                     </form>
                     <div class="form-container">
                         <label for="telia-extra">Extra kostnad:</label>
                         <input type="number" id="telia-extra" name="extra" placeholder="Någon fucking rabatt" oninput="updateCost('telia')">
                     </div>
                     <div class="total-box">
-                        Månadskostnad: <span id="telia-totalSum">0</span>
+                        Månadskostnad:<br><span id="telia-totalSum">0</span>
                     </div>
-                    <div class="difference-box" id="telia-difference">Diff en månad: <span id="telia-difference-value">0</span></div>
-                    <div class="difference-box">Diff 24 månader: <span id="telia-difference-value-24">0</span></div>
+                    <div class="difference-box" id="telia-difference">Diff en månad:<br><span id="telia-difference-value">0</span></div>
+                    <div class="difference-box">Diff 24 månader:<br><span id="telia-difference-value-24">0</span></div>
                 </div>
             </div>
     
@@ -102,33 +104,34 @@
                 <h2>Tele2</h2>
                 <div class="form-container">
                     <form id="tele2Form">
-                        <label for="tele2-first">Surf:</label>
+                        <label for="tele2-first">Surf:<br></label>
                         <select id="tele2-first" name="first" onchange="calculateTotals()">
                             <option value="0">-</option>
-                            <option value="249">5GB</option>
-                            <option value="299">15GB</option>
-                            <option value="399">OBEG</option>
+                            <option value="249">5GB | 249sek</option>
+                            <option value="299">15GB | 299sek</option>
+                            <option value="399">OBEG | 399sek</option>
                         </select>
-                        <br>
-                        <label for="tele2-second">Extra användare:</label>
+                        <br><br>
+                        <label for="tele2-second">Extra användare:<br></label>
                         <select id="tele2-second" name="second" onchange="calculateTotals()">
                             <option value="0">-</option>
-                            <option value="199">1</option>
-                            <option value="398">2</option>
-                            <option value="597">3</option>
-                            <option value="796">4</option>
-                            <option value="995">5</option>
+                            <option value="199">1 | 199sek</option>
+                            <option value="398">2 | 398sek</option>
+                            <option value="597">3 | 597sek</option>
+                            <option value="796">4 | 796sek</option>
+                            <option value="995">5 | 995sek</option>
                         </select>
+                        <br><br>
                     </form>
                     <div class="form-container">
                     <label for="tele2-extra">Extra kostnad:</label>
                     <input type="number" id="tele2-extra" name="extra" placeholder="Någon fucking rabatt" oninput="updateCost('tele2')">
                     </div>
                     <div class="total-box">
-                        Månadskostnad: <span id="tele2-totalSum">0</span>
+                        Månadskostnad:<br><span id="tele2-totalSum">0</span>
                     </div>
-                    <div class="difference-box" id="tele2-difference">Diff en månad: <span id="tele2-difference-value">0</span></div>
-                    <div class="difference-box">Diff 24 månader: <span id="tele2-difference-value-24">0</span></div>
+                    <div class="difference-box" id="tele2-difference">Diff en månad:<br><span id="tele2-difference-value">0</span></div>
+                    <div class="difference-box">Diff 24 månader:<br><span id="tele2-difference-value-24">0</span></div>
                 </div>
                 
             </div>
@@ -137,39 +140,40 @@
                 <h2>Telenor</h2>
                 <div class="form-container">
                     <form id="telenorForm">
-                        <label for="telenor-first">Surf:</label>
+                        <label for="telenor-first">Surf:<br></label>
                         <select id="telenor-first" name="first" onchange="calculateTotals()">
                             <option value="0">-</option>
-                            <option value="229">5GB</option>
-                            <option value="299">15GB</option>
-                            <option value="399">35GB</option>
-                            <option value="449">OBEG</option>
+                            <option value="229">5GB | 229sek</option>
+                            <option value="299">15GB| 299sek</option>
+                            <option value="399">35GB| 399sek</option>
+                            <option value="449">OBEG| 449sek</option>
                         </select>
-                        <br>
-                        <label for="telenor-second">Extra användare:</label>
+                        <br><br>
+                        <label for="telenor-second">Extra användare:<br></label>
                         <select id="telenor-second" name="second" onchange="calculateTotals()">
                             <option value="0">-</option>
-                            <option value="219">1</option>
-                            <option value="438">2</option>
-                            <option value="657">3</option>
-                            <option value="876">4</option>
-                            <option value="1095">5</option>
+                            <option value="219">1 | 219sek</option>
+                            <option value="438">2| 438sek</option>
+                            <option value="657">3| 657sek</option>
+                            <option value="876">4| 876sek</option>
+                            <option value="1095">5| 1095sek</option>
                         </select>
+                        <br><br>
                     </form>
                     <div class="form-container">
                     <label for="telenor-extra">Extra kostnad:</label>
                     <input type="number" id="telenor-extra" name="extra" placeholder="Någon fucking rabatt" oninput="updateCost('telenor')">
                     </div>
                     <div class="total-box">
-                        Månadskostnad: <span id="telenor-totalSum">0</span>
+                        Månadskostnad:<br><span id="telenor-totalSum">0</span>
                     </div>
-                    <div class="difference-box" id="telenor-difference">Diff en månad: <span id="telenor-difference-value">0</span></div>
-                    <div class="difference-box">Diff 24 månader: <span id="telenor-difference-value-24">0</span></div>
+                    <div class="difference-box" id="telenor-difference">Diff en månad:<br><span id="telenor-difference-value">0</span></div>
+                    <div class="difference-box">Diff 24 månader:<br><span id="telenor-difference-value-24">0</span></div>
                 </div>
             </div>
         </div>
     </main>
-    
+
     <footer></footer>
     <script src="app.js"></script>
 </body>
