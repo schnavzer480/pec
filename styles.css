@@ -55,13 +55,14 @@ main, footer {
 }
 
 h2 {
-    margin-bottom: 3rem;
+    margin: 1rem 0 3rem 0;
 }
 
 @media (max-width: 1000px) {
     .main-container {
         display: none;
     }
+    
     .hidden {
         display: block;
         text-align: center;
