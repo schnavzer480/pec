@@ -13,6 +13,7 @@
     --aqua: rgb(51, 187, 187);
     --red: rgb(187, 10, 10);
     --green: rgb(19, 214, 104);
+    --white: rgb(242, 242, 242);
 }
 
 main, footer {
@@ -56,6 +57,44 @@ main, footer {
 
 h2 {
     margin: 1rem 0 3rem 0;
+}
+
+/*DAY MODE*/
+body.day-mode {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+body.day-mode .main-container {
+    background-color: var(--white);
+}
+
+body.day-mode .tre-container {
+    border-color: var(--green);
+    color: var(--black);
+} 
+body.day-mode .telia-container, 
+body.day-mode .tele2-container, 
+body.day-mode .telenor-container {
+    border-color: var(--red);
+    color: var(--black);
+}
+
+body.day-mode .total-box,
+body.day-mode .difference-box {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+/* Specific styles for the tre-container's total and difference boxes */
+body.day-mode .tre-container .total-box {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+body.day-mode .tre-container .difference-box {
+    background-color: var(--white);
+    color: var(--black);
 }
 
 @media (max-width: 1000px) {
