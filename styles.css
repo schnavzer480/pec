@@ -14,6 +14,7 @@
     --red: rgb(187, 10, 10);
     --green: rgb(19, 214, 104);
     --white: rgb(242, 242, 242);
+    --gray: rgb(105, 105, 105);
 }
 
 main, footer {
@@ -27,6 +28,21 @@ main, footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+#dayModeButton {
+    background-color: transparent;
+    color: var(--red);
+    padding: 1rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    border-radius: 8px;
+    height: 30rem;
+    transition-duration: 0.4s;
+}
+#dayModeButton:hover {
+    background-color: var(--gray);
+    color: var(--red);
 }
 
 .hidden {
