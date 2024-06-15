@@ -30,14 +30,46 @@ main, footer {
     align-items: center;
 }
 
-#dayModeButton {
+.btn {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
     background-color: transparent;
     color: var(--red);
     padding: 1rem;
     font-size: 1.3rem;
     text-transform: uppercase;
     border-radius: 8px;
-    height: 30rem;
+    height: 15rem;
+    transition-duration: 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--red);
+    margin-top: 2rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+a:hover {
+    background-color: var(--gray);
+    color: var(--red);
+}
+
+
+#dayModeButton {
+    background-color: transparent;
+    border: 2px solid var(--red);
+    color: var(--red);
+    padding: 1rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    border-radius: 8px;
+    height: 15em;
+    font-size: 1.5rem;
+    font-weight: lighter;
     transition-duration: 0.4s;
 }
 #dayModeButton:hover {
