@@ -72,6 +72,10 @@ main, footer {
     gap: 1rem;
 }
 
+.form-container select, input {
+    width: 20rem;
+}
+
 h2 {
     margin: 1rem 0 3rem 0;
 }
