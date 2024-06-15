@@ -3,7 +3,8 @@ function calculateTotal(containerId) {
         document.getElementById(containerId + '-first'),
         document.getElementById(containerId + '-second'),
         document.getElementById(containerId + '-third'),
-        document.getElementById(containerId + '-fourth')
+        document.getElementById(containerId + '-fourth'),
+        document.getElementById(containerId + '-fifth')
     ];
     return elements.reduce((sum, element) => {
         return sum + (element ? parseInt(element.value) : 0);
