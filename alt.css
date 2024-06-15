@@ -17,9 +17,9 @@
     --white: rgb(242, 242, 242);
     --gray: rgb(105, 105, 105);
 
-    --blue: rgba(2,83,106,255);
-    --lightblue: rgba(20,116,145,255);
-    --redish: rgba(204,146,144,255);
+    --blue: rgba(0,83,106,255);
+    --lightblue: rgba(20,115,143,255);
+    --redder: rgba(164,77,76,255);
     --dark: rgba(34,34,34,255);
 
 }
@@ -82,10 +82,15 @@ a:hover, #dayModeButton:hover, #resetButton:hover {
     justify-content: flex-start;
     align-items: center;
     width: 19%;
+    height: 95%;
+    margin-top: 1rem;
+    border: 2px solid var(--green);
+}
+.container.tre {
     border: 2px solid var(--lightblue);
 }
 .container.telia, .tele2, .telenor {
-    border: 2px solid var(--red);
+    border: 2px solid var(--redder);
 }
 
 h2 {
