@@ -4,11 +4,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Cinzel", serif;
 }
 
 :root {
     font-size: 62.5%;
-    font-family: "Cinzel", serif;
+    
     --black: rgb(18, 18, 18);
     --aqua: rgb(51, 187, 187);
     --red: rgb(187, 10, 10);
@@ -26,11 +27,35 @@ body {
     background-color: var(--black);
 }
 
+
+/*NAVBAR!!!!!!!!!!!!!!!*/
 nav {
     display: flex;
+    justify-content: center;
+    gap: 20rem;
     width: 100%;
     height: 10vh;
     border: 2px solid blue;
+}
+
+a, #dayModeButton, #resetButton {
+    background-color: transparent;
+    color: var(--red);
+    padding: 1.8rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.4rem;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    border: 2px solid var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a:hover, #dayModeButton:hover, #resetButton:hover {
+    background-color: var(--gray);
+    color: var(--red);
 }
 
 .main-container {
