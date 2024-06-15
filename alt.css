@@ -58,9 +58,17 @@ a:hover, #dayModeButton:hover, #resetButton:hover {
     color: var(--red);
 }
 
+
+/*MAIN KÖNTÄNT!!!!!!!!!!1!1!1!111SHIFT*/
 .main-container {
     display: flex;
+    justify-content: space-around;
     width: 100%;
     height: 90vh;
     border: 2px solid red;
+}
+
+.container {
+    width: 19%;
+    border: 2px solid var(--green);
 }
