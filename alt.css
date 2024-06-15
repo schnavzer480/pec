@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    font-family: "Cinzel", serif;
+    --black: rgb(18, 18, 18);
+    --aqua: rgb(51, 187, 187);
+    --red: rgb(187, 10, 10);
+    --green: rgb(19, 214, 104);
+    --white: rgb(242, 242, 242);
+    --gray: rgb(105, 105, 105);
+}
+
+main, footer {
+    display: block;
+    margin: 0;
+}
