@@ -78,7 +78,8 @@ a:hover, #dayModeButton:hover, #resetButton:hover {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
+    padding-left: 15px;
     width: 19%;
     height: 95%;
     margin-top: 1rem;
@@ -120,4 +121,15 @@ label {
 
 .main-container select, input {
     width: 20rem;
+}
+
+
+/*RESULTATBOXAR*/
+.result-box {
+    color: var(--aqua);
+    font-size: 1.8rem;
+}
+#tre-totalSum, #tre-totalSum-24 {
+    display: block;
+    margin-bottom: 15px;
 }
