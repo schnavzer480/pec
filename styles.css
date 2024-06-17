@@ -72,6 +72,7 @@ a:hover {
     font-weight: lighter;
     transition-duration: 0.4s;
     margin-top: 1rem;
+    cursor: pointer;
 }
 #dayModeButton:hover, #resetButton:hover {
     background-color: var(--gray);
