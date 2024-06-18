@@ -130,8 +130,16 @@ label {
     color: var(--aqua);
     font-size: 2rem;
 }
-#tre-totalSum, #tre-totalSum-24 {
+#tre-totalSum, #tre-totalSum-24, #telia-totalSum, #tele2-totalSum, #telenor-totalSum {
     display: block;
     margin-bottom: 15px;
     color: var(--yellow);
+    font-size: 3rem;
+}
+
+#telia-difference-value, #telia-difference-value-24, #tele2-difference-value, #tele2-difference-value-24, #telenor-difference-value, #telenor-difference-value-24 {
+    display: block;
+    margin-bottom: 15px;
+    color: var(--green);
+    font-size: 3rem;
 }
