@@ -21,6 +21,7 @@
     --lightblue: rgba(20,115,143,255);
     --redder: rgba(164,77,76,255);
     --dark: rgba(34,34,34,255);
+    --yellow: rgb(255, 255, 159);
 
 }
 
@@ -49,7 +50,7 @@ a, #dayModeButton, #resetButton {
     padding: 1.8rem;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 2rem;
     border-radius: 25px;
     transition-duration: 0.4s;
     border: 6px solid var(--blue);
@@ -120,7 +121,7 @@ label {
 }
 
 .main-container select, input {
-    width: 20rem;
+    width: 25rem;
 }
 
 
@@ -132,4 +133,5 @@ label {
 #tre-totalSum, #tre-totalSum-24 {
     display: block;
     margin-bottom: 15px;
+    color: var(--yellow);
 }
