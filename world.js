@@ -17,7 +17,6 @@ function suggestCountry() {
     const input = document.getElementById('world');
     let userInput = input.value.trim();
 
-    // Find matching countries based on user input
     const matchingCountries = countriesList.filter(country =>
         country.toLowerCase().startsWith(userInput.toLowerCase())
     );
