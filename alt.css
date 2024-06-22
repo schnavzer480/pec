@@ -21,7 +21,7 @@
     --lightblue: rgba(20,115,143,255);
     --redder: rgba(164,77,76,255);
     --dark: rgba(34,34,34,255);
-    --yellow: rgb(255, 255, 159);
+    --yellow: rgb(255, 255, 0);
 
     --pecred: rgb(153, 33, 29);
     --pecblue: rgb(0, 83, 106);
@@ -37,6 +37,7 @@ main, footer {
 body {
     background-color: var(--dark);
 }
+
 
 
 /*NAVBAR!!!!!!!!!!!!!!!*/
@@ -69,6 +70,7 @@ a:hover, #dayModeButton:hover, #resetButton:hover {
     background-color: var(--white);
     border: none;
 }
+
 
 
 /*MAIN KÖNTÄNT!!!!!!!!!!1!1!1!111SHIFT*/
@@ -128,6 +130,7 @@ label {
 }
 
 
+
 /*RESULTATBOXAR*/
 .result-box {
     color: var(--aqua);
@@ -153,6 +156,8 @@ label {
     color: var(--green);
     font-size: 3rem;
 }
+
+
 
 /*DAYMODE*/
 body.day-mode, body.day-mode .main-container {
