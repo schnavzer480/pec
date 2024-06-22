@@ -38,6 +38,9 @@ body {
     background-color: var(--dark);
 }
 
+.hidden {
+    display: none;
+}
 
 
 /*NAVBAR!!!!!!!!!!!!!!!*/
@@ -226,4 +229,20 @@ body.day-mode label {
 
 body.day-mode #tre-totalSum, body.day-mode .difference-box #tre-totalSum-24 {
     color: var(--dark);
+}
+
+
+
+@media (max-width: 1225px) {
+    nav, .main-container {
+        display: none;
+    }
+
+    .hidden {
+        display: block;
+        text-align: center;
+        color: var(--pecred);
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
 }
