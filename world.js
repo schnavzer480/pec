@@ -1,6 +1,14 @@
 const countriesList = [
-    'Sweden', 'Norway', 'Denmark', 'Finland', 'Iceland', 
-    'Germany', 'France', 'Italy', 'Spain', 'Switzerland'
+    "Albanien", "Argentina", "Australien", "Azerbajdzjan", "Bangladesh", "Brasilien", "Chile", "Colombia", "Costa Rica", "Ecuador", 
+    "El Salvador", "Färöarna", "Grönland", "Guatemala", "Hongkong", "Indien", "Indonesien", "Israel", "Japan", "Kanada", "Kenya", 
+    "Kina", "Macao", "Malaysia", "Mexico", "Nicaragua", "Nigeria", "Nya Zeeland", "Oman", "Pakistan", "Panama", "Peru", "Puerto Rico", 
+    "Ryssland", "San Marino", "Saudiarabien", "Schweiz", "Singapore", "Sri Lanka", "Sydkorea", "Taiwan", "Thailand", "Turkiet", 
+    "Ukraina", "Uruguay", "USA", "Uzbekistan", "Vietnam", "Vitryssland", "Zambia", "Belgien", "Bulgarien", "Cypern", "Danmark", 
+    "Estland", "Finland", "Åland", "Frankrike", "Martinique", "Guadeloupe", "Saint-Martin", "Franska Guyana", "Grekland", "Irland", 
+    "Italien", "Kroatien", "Lettland", "Litauen", "Luxemburg", "Malta", "Nederländerna", "Saint-Martin", "Polen", "Portugal", 
+    "Madeira", "Azorerna", "Rumänien", "Slovakien", "Slovenien", "Spanien", "Kanarieöarna", "Ceuta", "Melilla", "Sverige", 
+    "Tjeckien", "Tyskland", "Ungern", "Österrike", "Storbritannien", "Gibraltar", "Jersey", "Guernsey", "Island", "Liechtenstein", 
+    "Norge", "Svalbard"
 ];
 
 let lastInputValue = ''; // To keep track of the last valid input value
