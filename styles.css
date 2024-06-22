@@ -4,17 +4,29 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Cinzel", serif;
 }
 
 :root {
     font-size: 62.5%;
-    font-family: "Cinzel", serif;
+    
     --black: rgb(18, 18, 18);
     --aqua: rgb(51, 187, 187);
     --red: rgb(187, 10, 10);
-    --green: rgb(19, 214, 104);
-    --white: rgb(242, 242, 242);
+    --green: rgb(12, 197, 92);
+    --white: #FFFFFF;
     --gray: rgb(105, 105, 105);
+
+    --blue: rgba(0,83,106,255);
+    --lightblue: rgba(20,115,143,255);
+    --redder: rgba(164,77,76,255);
+    --dark: rgba(34,34,34,255);
+    --yellow: rgb(255, 255, 0);
+
+    --pecred: rgb(153, 33, 29);
+    --pecblue: rgb(0, 83, 106);
+    --peclight: rgba(20, 116, 144, 255);
+    --peclightalt: rgb(39, 158, 194);
 }
 
 main, footer {
@@ -22,146 +34,196 @@ main, footer {
     margin: 0;
 }
 
-.main-container {
-    background-color: var(--black);
-    height: 100vh;
+body {
+    background-color: var(--dark);
+}
+
+
+
+/*NAVBAR!!!!!!!!!!!!!!!*/
+nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
+    width: 100%;
+    height: 10vh;
 }
 
-.btn {
+.nav-buttons {
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8rem;
+    width: 100%;
+    height: 10vh;
+    padding-left: 1.5rem;
 }
 
-a {
+.nav-input {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8rem;
+    width: 100%;
+    height: 10vh;
+    padding-right: 1.5rem;
+}
+
+a, #dayModeButton, #resetButton {
     background-color: transparent;
-    color: var(--red);
+    color: var(--peclightalt);
     padding: 1rem;
-    font-size: 1.3rem;
     text-transform: uppercase;
-    border-radius: 8px;
-    height: 12rem;
+    text-decoration: none;
+    font-size: 2rem;
+    border-radius: 25px;
     transition-duration: 0.4s;
+    border: 6px solid var(--pecblue);
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid var(--red);
-    margin-top: 1rem;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: lighter;
-}
-a:hover {
-    background-color: var(--gray);
-    color: var(--red);
-}
-
-
-#dayModeButton, #resetButton {
-    background-color: transparent;
-    border: 2px solid var(--red);
-    color: var(--red);
-    padding: 1rem;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    border-radius: 8px;
-    height: 12em;
-    font-size: 1.5rem;
-    font-weight: lighter;
-    transition-duration: 0.4s;
-    margin-top: 1rem;
     cursor: pointer;
 }
-#dayModeButton:hover, #resetButton:hover {
-    background-color: var(--gray);
-    color: var(--red);
+
+a:hover, #dayModeButton:hover, #resetButton:hover {
+    background-color: var(--white);
+    border: 6px solid var(--white);
 }
 
-.hidden {
-    display: none;
+#world {
+    width: 25rem;
+    height: 5rem;
+    align-self: center;
 }
 
-.tre-container, .telia-container, .tele2-container, .telenor-container {
+input:focus {
+    outline: none;
+    border-color: initial;
+}
+
+input {
+    border: 3px solid var(--pecblue);
+    padding-left: 3px;
+}
+
+.nav-input input {
+    padding-left: 10px;
+    font-size: 2rem;
+}
+
+
+
+/*MAIN KÖNTÄNT!!!!!!!!!!1!1!1!111SHIFT*/
+.main-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 90vh;
+}
+
+.container {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
-    padding-left: 20px;
-    width: 300px;
-    height: 80vh;
-    border: 2px solid var(--red);
+    padding-left: 15px;
+    width: 23%;
+    height: 95%;
+    margin-top: 1rem;
+    border-radius: 25px;
+}
+.container.tre {
+    border: 8px solid var(--peclight);
+}
+.container.telia, .tele2, .telenor {
+    border: 8px solid var(--pecred);
+}
+/*.container.results {
+    background-color: var(--green);
+    border: 4px solid var(--redder);
+}*/
+
+/*h2 {
+    color: var(--redder);
+    font-size: 3rem;
+    margin: 10px 0 0 15px;
+    align-self: flex-start;
+}*/
+h3 {
+    color: var(--aqua);
+    font-size: 3.5rem;
+    margin-top: 10px;
+    align-self: flex-start;
+}
+label {
+    color: var(--aqua);
+    font-size: 2rem;
+    display: block;
+}
+
+.sel-wrapper {
+    margin: 30px 0 30px 0;
+}
+
+.main-container select, input {
+    width: 25rem;
+}
+
+
+
+/*RESULTATBOXAR*/
+.result-box {
     color: var(--aqua);
     font-size: 2rem;
 }
-.tre-container {
-    border: 2px solid var(--green);
+.total-box #telia-totalSum, .total-box #tele2-totalSum, .total-box #telenor-totalSum {
+    display: block;
+    margin-bottom: 15px;
+    color: var(--pecred);
+    font-size: 3rem;
 }
 
-.form-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1rem;
+#tre-totalSum, .difference-box #tre-totalSum-24 {
+    display: block;
+    margin-bottom: 15px;
+    color: var(--yellow);
+    font-size: 3rem;
 }
 
-.form-container select, input {
-    width: 20rem;
+#telia-difference-value, #telia-difference-value-24, #tele2-difference-value, #tele2-difference-value-24, #telenor-difference-value, #telenor-difference-value-24 {
+    display: block;
+    margin-bottom: 15px;
+    color: var(--green);
+    font-size: 3rem;
 }
 
-h2 {
-    margin: 1rem 0 3rem 0;
-}
 
-/*DAY MODE*/
-body.day-mode {
-    background-color: var(--white);
-    color: var(--black);
-}
 
-body.day-mode .main-container {
+/*DAYMODE*/
+body.day-mode, body.day-mode .main-container {
     background-color: var(--white);
 }
 
-body.day-mode .tre-container {
-    border-color: var(--green);
-    color: var(--black);
+body.day-mode .container.tre {
+    border-color: var(--peclight);
+    color: var(--dark);
 } 
-body.day-mode .telia-container, 
-body.day-mode .tele2-container, 
-body.day-mode .telenor-container {
-    border-color: var(--red);
-    color: var(--black);
+body.day-mode .container.telia, 
+body.day-mode .container.tele2, 
+body.day-mode .container.telenor {
+    border-color: var(--pecred);
+    color: var(--dark);
 }
 
 body.day-mode .total-box,
 body.day-mode .difference-box {
     background-color: var(--white);
-    color: var(--black);
+    color: var(--dark);
 }
 
-/* Specific styles for the tre-container's total and difference boxes */
-body.day-mode .tre-container .total-box {
-    background-color: var(--white);
-    color: var(--black);
+body.day-mode label {
+    color: var(--dark);
 }
 
-body.day-mode .tre-container .difference-box {
-    background-color: var(--white);
-    color: var(--black);
-}
-
-@media (max-width: 1000px) {
-    .main-container {
-        display: none;
-    }
-
-    .hidden {
-        display: block;
-        text-align: center;
-        color: var(--red); /* Optional styling for the message */
-        font-size: 2rem; /* Adjust font size as needed */
-        margin-top: 2rem; /* Optional margin for positioning */
-    }
+body.day-mode #tre-totalSum, body.day-mode .difference-box #tre-totalSum-24 {
+    color: var(--dark);
 }
