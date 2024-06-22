@@ -11,11 +11,11 @@ const countriesList = [
     "Norge", "Svalbard"
 ];
 
-let lastInputValue = ''; // To keep track of the last valid input value
+let lastInputValue = '';
 
 function suggestCountry() {
     const input = document.getElementById('world');
-    let userInput = input.value.trim(); // Get and trim user input
+    let userInput = input.value.trim();
 
     // Find matching countries based on user input
     const matchingCountries = countriesList.filter(country =>
@@ -24,14 +24,14 @@ function suggestCountry() {
 
     if (userInput === '') {
         input.placeholder = "3Världen";
-        input.style.borderColor = ''; // Reset border color if input is empty
-        input.classList.remove('valid', 'invalid'); // Remove valid and invalid classes
+        input.style.borderColor = '';
+        input.classList.remove('valid', 'invalid');
     } else {
         if (matchingCountries.length > 0) {
-            // Change border color to green
+            
             input.style.borderColor = 'green';
         } else {
-            // Change border color to red (or any other color) for invalid input
+            
             input.style.borderColor = 'red';
         }
 
@@ -58,10 +58,9 @@ function suggestCountry() {
     }
 }
 
-// Event listener for input changes
+
 document.getElementById('world').addEventListener('input', suggestCountry);
 
-// Event listener for handling key press events
 document.getElementById('world').addEventListener('keydown', function(event) {
     if (event.key === 'Backspace' || event.keyCode === 8) {
         document.getElementById('world').value = lastInputValue;

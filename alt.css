@@ -104,13 +104,6 @@ input {
     border: 3px solid transparent; /
 }
 
-input.valid {
-    border-color: var(--green);
-}
-
-input.invalid {
-    border-color: var(--pecred);
-}
 
 
 /*MAIN KÖNTÄNT!!!!!!!!!!1!1!1!111SHIFT*/
