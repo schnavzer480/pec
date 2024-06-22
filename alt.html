@@ -17,9 +17,15 @@
 <body>
     <header>
         <nav>
-            <button id="dayModeButton">Ljust/Mörkt</button>
-            <button id="resetButton" onclick="resetForms()">Återställ</button>
-            <a href="index.html">Tillbaka</a>
+            <div class="nav-buttons">
+                <button id="dayModeButton">Ljust/Mörkt</button>
+                <button id="resetButton" onclick="resetForms()">Återställ</button>
+                <!--<a href="index.html">Tillbaka</a>-->
+            </div>
+            <div class="nav-input">
+                <label for="world"></label>
+                <input type="country" id="world" name="countries" placeholder="Swe" oninput="">
+            </div>     
         </nav>
     </header>
     <main>
