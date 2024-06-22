@@ -95,6 +95,22 @@ a:hover, #dayModeButton:hover, #resetButton:hover {
     align-self: center;
 }
 
+input:focus {
+    outline: none;
+    border-color: initial;
+}
+
+input {
+    border: 3px solid transparent; /
+}
+
+input.valid {
+    border-color: var(--green);
+}
+
+input.invalid {
+    border-color: var(--pecred);
+}
 
 
 /*MAIN KÖNTÄNT!!!!!!!!!!1!1!1!111SHIFT*/
