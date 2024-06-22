@@ -14,7 +14,7 @@
     --aqua: rgb(51, 187, 187);
     --red: rgb(187, 10, 10);
     --green: rgb(12, 197, 92);
-    --white: rgb(242, 242, 242);
+    --white: #FFFFFF;
     --gray: rgb(105, 105, 105);
 
     --blue: rgba(0,83,106,255);
@@ -133,7 +133,14 @@ label {
     color: var(--aqua);
     font-size: 2rem;
 }
-#tre-totalSum, #tre-totalSum-24, #telia-totalSum, #tele2-totalSum, #telenor-totalSum {
+.total-box #telia-totalSum, .total-box #tele2-totalSum, .total-box #telenor-totalSum {
+    display: block;
+    margin-bottom: 15px;
+    color: var(--pecred);
+    font-size: 3rem;
+}
+
+#tre-totalSum, .difference-box #tre-totalSum-24 {
     display: block;
     margin-bottom: 15px;
     color: var(--yellow);
@@ -145,4 +152,34 @@ label {
     margin-bottom: 15px;
     color: var(--green);
     font-size: 3rem;
+}
+
+/*DAYMODE*/
+body.day-mode, body.day-mode .main-container {
+    background-color: var(--white);
+}
+
+body.day-mode .container.tre {
+    border-color: var(--peclight);
+    color: var(--dark);
+} 
+body.day-mode .container.telia, 
+body.day-mode .container.tele2, 
+body.day-mode .container.telenor {
+    border-color: var(--pecred);
+    color: var(--dark);
+}
+
+body.day-mode .total-box,
+body.day-mode .difference-box {
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+body.day-mode label {
+    color: var(--dark);
+}
+
+body.day-mode #tre-totalSum, body.day-mode .difference-box #tre-totalSum-24 {
+    color: var(--dark);
 }
