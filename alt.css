@@ -68,7 +68,7 @@ a, #dayModeButton, #resetButton {
 
 a:hover, #dayModeButton:hover, #resetButton:hover {
     background-color: var(--white);
-    border: none;
+    border: 6px solid var(--white);
 }
 
 
