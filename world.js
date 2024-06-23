@@ -8,7 +8,7 @@ const countriesList = [
     "Italien", "Kroatien", "Lettland", "Litauen", "Luxemburg", "Malta", "Nederländerna", "Saint-Martin", "Polen", "Portugal", 
     "Madeira", "Azorerna", "Rumänien", "Slovakien", "Slovenien", "Spanien", "Kanarieöarna", "Ceuta", "Melilla", "Sverige", 
     "Tjeckien", "Tyskland", "Ungern", "Österrike", "Storbritannien", "Gibraltar", "Jersey", "Guernsey", "Island", "Liechtenstein", 
-    "Norge", "Svalbard"
+    "Norge", "Svalbard", "England", "Skottland", "Wales", "Nordirland"
 ];
 
 let lastInputValue = '';
