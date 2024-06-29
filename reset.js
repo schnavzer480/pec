@@ -8,6 +8,6 @@ function resetForms() {
         inputField.value = "";
         inputField.placeholder = "3Världen";
         inputField.style.borderColor = '';
-        inputField.classList.remove('valid', 'invalid');
-    calculateTotals();
+        //inputField.classList.remove('valid', 'invalid');
+    //calculateTotals();
 }
