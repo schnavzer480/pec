@@ -50,8 +50,6 @@ nav {
     align-items: center;
     width: 100%;
     height: 10vh;
-
-    border: 2px solid red;
 }
 
 .nav-buttons {
@@ -62,12 +60,18 @@ nav {
     width: 80%;
     height: 10vh;
     padding-left: 2rem;
-
-    border: 2px solid blue;
 }
 h1 {
     color: var(--pecblue);
     font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+h1[info] {
+    color: var(--pecred);
+    margin: 2rem 0 2rem 0;
+    font-size: 5rem;
 }
 
 .nav-info {
@@ -83,11 +87,9 @@ h1 {
     width: 20%;
     height: 10vh;
     padding-right: 1.5rem;
-
-    border: 2px solid green;
 }
 
-a, #dayModeButton, #resetButton {
+a.nav-btn, #dayModeButton, #resetButton {
     background-color: transparent;
     color: var(--peclightalt);
     padding: 1rem;
@@ -103,7 +105,7 @@ a, #dayModeButton, #resetButton {
     cursor: pointer;
 }
 
-a:hover, #dayModeButton:hover, #resetButton:hover {
+a.nav-btn:hover, #dayModeButton:hover, #resetButton:hover {
     background-color: var(--white);
     border: 6px solid var(--white);
 }
@@ -161,12 +163,6 @@ input {
     border: 4px solid var(--redder);
 }*/
 
-/*h2 {
-    color: var(--redder);
-    font-size: 3rem;
-    margin: 10px 0 0 15px;
-    align-self: flex-start;
-}*/
 h3 {
     color: var(--aqua);
     font-size: 3.5rem;
@@ -248,6 +244,76 @@ body.day-mode #tre-totalSum, body.day-mode .difference-box #tre-totalSum-24 {
 }
 
 
+
+/*LAYOUT*/
+.info-layout {
+    display: flex;
+    width: 100%;
+}
+
+.info-instructions {
+    width: 50%;
+    margin: 0 25px 0 25px;
+}
+
+.info-update {
+    width: 50%;
+    padding-left: 25px;
+
+    margin: 0 25px 0 25px;
+}
+
+li {
+    font-size: 2rem;
+    color: var(--peclightalt);
+    padding-bottom: 30px;
+}
+
+h2 {
+    font-size: 3rem;
+    color: var(--pecblue);
+    padding: 0 0 30px 25px;
+}
+
+p {
+    font-size: 2rem;
+    color: var(--peclightalt);
+    padding: 0 0 30px 25px;
+}
+
+a.info-link {
+    color: var(--pecred);
+    text-decoration: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.return-box {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 40px 0;
+}
+
+a.return-btn {
+    background-color: transparent;
+    color: var(--peclightalt);
+    padding: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 2rem;
+    border-radius: 25px;
+    transition-duration: 0.4s;
+    border: 6px solid var(--pecblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+a.return-btn:hover {
+    background-color: var(--white);
+    border: 6px solid var(--white);
+}
 
 @media (max-width: 1225px) {
     nav, .main-container {
