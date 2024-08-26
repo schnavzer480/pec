@@ -11,3 +11,5 @@ function resetForms() {
         //inputField.classList.remove('valid', 'invalid');
     calculateTotals();
 }
+
+document.querySelector("#resetButton").addEventListener("click", resetForms);
