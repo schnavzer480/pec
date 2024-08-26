@@ -1,10 +1,10 @@
 function resetForms() {
-    document.getElementById("treForm").reset();
-    document.getElementById("teliaForm").reset();
-    document.getElementById("tele2Form").reset();
-    document.getElementById("telenorForm").reset();
+    document.querySelector("#treForm").reset();
+    document.querySelector("#teliaForm").reset();
+    document.querySelector("#tele2Form").reset();
+    document.querySelector("#telenorForm").reset();
     //document.getElementById("world").value = " ";
-    let inputField = document.getElementById("world");
+    let inputField = document.querySelector("#world");
         inputField.value = "";
         inputField.placeholder = "3Världen";
         inputField.style.borderColor = '';
