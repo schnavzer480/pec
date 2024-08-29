@@ -66,7 +66,7 @@ nav {
 }
 h1 {
     color: var(--peclightalt);
-    font-size: 2.5rem;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
 }
@@ -343,7 +343,7 @@ a.return-btn:hover {
         justify-content: flex-start;
         align-items: flex-start;
         width: 100%;
-        height: auto;
+        height: 20vh;
         margin: 0 0 0 2rem;
     }
     
@@ -392,12 +392,10 @@ a.return-btn:hover {
     /*MAIN KÖNTÄNT!!!!!!!!!!1!1!1!111SHIFT*/
     .main-container {
         display: flex;
-        justify-content: space-around;
-        width: 100%;
-        height: 90vh;
-
-
-        display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: auto;
+        height: 80vh;
     }
     
     .container {
@@ -405,37 +403,27 @@ a.return-btn:hover {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding-left: 15px;
-        width: 23%;
-        height: 95%;
-        margin-top: 1rem;
+        width: auto;
+        height: auto;
         border-radius: 25px;
     }
     .container.tre {
-        border: 8px solid var(--peclight);
+        border: 4px solid var(--peclight);
     }
     .container.telia, .tele2, .telenor {
-        border: 8px solid var(--pecred);
+        border: 4px solid var(--pecred);
     }
-    /*.container.results {
-        background-color: var(--green);
-        border: 4px solid var(--redder);
-    }*/
     
     h3 {
-        color: var(--aqua);
-        font-size: 3.5rem;
-        margin-top: 10px;
-        align-self: flex-start;
+        font-size: 2rem;
     }
     label {
-        color: var(--aqua);
-        font-size: 2rem;
+        font-size: 1rem;
         display: block;
     }
     
     .sel-wrapper {
-        margin: 30px 0 30px 0;
+        margin: 10px 10px 10px 0;
     }
     
     .main-container select, input {
@@ -446,60 +434,21 @@ a.return-btn:hover {
     
     /*RESULTATBOXAR*/
     .result-box {
-        color: var(--aqua);
-        font-size: 2rem;
+        font-size: 1rem;
     }
     .total-box #telia-totalSum, .total-box #tele2-totalSum, .total-box #telenor-totalSum {
-        display: block;
         margin-bottom: 15px;
-        color: var(--pecred);
-        font-size: 3rem;
+        font-size: 2rem;
     }
     
     #tre-totalSum, .difference-box #tre-totalSum-24 {
-        display: block;
         margin-bottom: 15px;
-        color: var(--yellow);
-        font-size: 3rem;
+        font-size: 2rem;
     }
     
     #telia-difference-value, #telia-difference-value-24, #tele2-difference-value, #tele2-difference-value-24, #telenor-difference-value, #telenor-difference-value-24 {
-        display: block;
-        margin-bottom: 15px;
-        color: var(--green);
-        font-size: 3rem;
-    }
-    
-    
-    
-    /*DAYMODE*/
-    body.day-mode, body.day-mode .main-container {
-        background-color: var(--white);
-    }
-    
-    body.day-mode .container.tre {
-        border-color: var(--peclight);
-        color: var(--dark);
-    } 
-    body.day-mode .container.telia, 
-    body.day-mode .container.tele2, 
-    body.day-mode .container.telenor {
-        border-color: var(--pecred);
-        color: var(--dark);
-    }
-    
-    body.day-mode .total-box,
-    body.day-mode .difference-box {
-        background-color: var(--white);
-        color: var(--dark);
-    }
-    
-    body.day-mode label {
-        color: var(--dark);
-    }
-    
-    body.day-mode #tre-totalSum, body.day-mode .difference-box #tre-totalSum-24 {
-        color: var(--dark);
+        margin-bottom: 0px;
+        font-size: 2rem;
     }
     
     
