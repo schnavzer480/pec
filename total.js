@@ -1,10 +1,10 @@
 function calculateTotal(containerId) {
     const elements = [
-        document.getElementById(containerId + '-first'),
-        document.getElementById(containerId + '-second'),
-        document.getElementById(containerId + '-third'),
-        document.getElementById(containerId + '-fourth'),
-        document.getElementById(containerId + '-fifth')
+        document.querySelector(`#${containerId}-first`),
+        document.querySelector(`#${containerId}-second`),
+        document.querySelector(`#${containerId}-third`),
+        document.querySelector(`#${containerId}-fourth`),
+        document.querySelector(`#${containerId}-fifth`)
     ];
     return elements.reduce((sum, element) => {
         return sum + (element ? parseInt(element.value) : 0);
@@ -12,45 +12,45 @@ function calculateTotal(containerId) {
 }
 
 function calculateTotals() {
-const treTotal = calculateTotal('tre');
-document.getElementById('tre-totalSum').textContent = treTotal;
-document.getElementById('tre-totalSum-24').textContent = treTotal * 24;
+    const treTotal = calculateTotal('tre');
+    document.querySelector('#tre-totalSum').textContent = treTotal;
+    document.querySelector('#tre-totalSum-24').textContent = treTotal * 24;
 
-const teliaTotal = calculateTotal('telia');
-const teliaExtra = parseInt(document.getElementById('telia-extra').value) || 0;
-const teliaTotalWithExtra = teliaTotal + teliaExtra;
-const teliaDifference = teliaTotalWithExtra - treTotal;
+    const teliaTotal = calculateTotal('telia');
+    const teliaExtra = parseInt(document.querySelector('#telia-extra').value) || 0;
+    const teliaTotalWithExtra = teliaTotal + teliaExtra;
+    const teliaDifference = teliaTotalWithExtra - treTotal;
 
-document.getElementById('telia-totalSum').textContent = teliaTotalWithExtra;
-document.getElementById('telia-difference-value').textContent = teliaDifference;
-document.getElementById('telia-difference-value-24').textContent = teliaDifference * 24;
+    document.querySelector('#telia-totalSum').textContent = teliaTotalWithExtra;
+    document.querySelector('#telia-difference-value').textContent = teliaDifference;
+    document.querySelector('#telia-difference-value-24').textContent = teliaDifference * 24;
 
-const tele2Total = calculateTotal('tele2');
-const tele2Extra = parseInt(document.getElementById('tele2-extra').value) || 0;
-const tele2TotalWithExtra = tele2Total + tele2Extra;
-const tele2Difference = tele2TotalWithExtra - treTotal;
+    const tele2Total = calculateTotal('tele2');
+    const tele2Extra = parseInt(document.querySelector('#tele2-extra').value) || 0;
+    const tele2TotalWithExtra = tele2Total + tele2Extra;
+    const tele2Difference = tele2TotalWithExtra - treTotal;
 
-document.getElementById('tele2-totalSum').textContent = tele2TotalWithExtra;
-document.getElementById('tele2-difference-value').textContent = tele2Difference;
-document.getElementById('tele2-difference-value-24').textContent = tele2Difference * 24;
+    document.querySelector('#tele2-totalSum').textContent = tele2TotalWithExtra;
+    document.querySelector('#tele2-difference-value').textContent = tele2Difference;
+    document.querySelector('#tele2-difference-value-24').textContent = tele2Difference * 24;
 
-const telenorTotal = calculateTotal('telenor');
-const telenorExtra = parseInt(document.getElementById('telenor-extra').value) || 0;
-const telenorTotalWithExtra = telenorTotal + telenorExtra;
-const telenorDifference = telenorTotalWithExtra - treTotal;
+    const telenorTotal = calculateTotal('telenor');
+    const telenorExtra = parseInt(document.querySelector('#telenor-extra').value) || 0;
+    const telenorTotalWithExtra = telenorTotal + telenorExtra;
+    const telenorDifference = telenorTotalWithExtra - treTotal;
 
-document.getElementById('telenor-totalSum').textContent = telenorTotalWithExtra;
-document.getElementById('telenor-difference-value').textContent = telenorDifference;
-document.getElementById('telenor-difference-value-24').textContent = telenorDifference * 24;
+    document.querySelector('#telenor-totalSum').textContent = telenorTotalWithExtra;
+    document.querySelector('#telenor-difference-value').textContent = telenorDifference;
+    document.querySelector('#telenor-difference-value-24').textContent = telenorDifference * 24;
 }
 
 function updateCost(provider) {
-    const extraCostInput = document.getElementById(provider + '-extra');
+    const extraCostInput = document.querySelector(`#${provider}-extra`);
     const extraCost = parseInt(extraCostInput.value);
     if (!isNaN(extraCost)) {
-        const currentTotal = parseInt(document.getElementById(provider + '-totalSum').textContent);
+        const currentTotal = parseInt(document.querySelector(`#${provider}-totalSum`).textContent);
         const newTotal = currentTotal + extraCost;
-        document.getElementById(provider + '-totalSum').textContent = newTotal;
+        document.querySelector(`#${provider}-totalSum`).textContent = newTotal;
         calculateTotals();
     }
 }
