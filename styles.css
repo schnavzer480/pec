@@ -322,8 +322,8 @@ a.return-btn:hover {
     border: 6px solid var(--white);
 }
 
-@media (max-width: 1225px) {
-    nav, .main-container {
+@media (max-width: 1300px) {
+    /*nav, .main-container {
         display: none;
     }
 
@@ -333,5 +333,244 @@ a.return-btn:hover {
         color: var(--pecred);
         font-size: 2rem;
         margin-top: 2rem;
+    }*/
+    
+    
+    /*NAVBAR!!!!!!!!!!!!!!!*/
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        height: auto;
+        margin: 0 0 0 2rem;
+    }
+    
+    .nav-buttons {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: auto;
+        width: auto;
+        padding-left: 0;
+        margin: 10px 0 10px 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin: 0 0 10px 10px;
+    }
+    
+    h1[info] {
+        color: var(--pecred);
+        margin: 2rem 0 2rem 0;
+        font-size: 5rem;
+    }
+    
+    .nav-info {
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .nav-input {
+        height: auto;
+        width: auto;
+        padding: 0;
+        gap: 0;
+    }
+
+    
+    #world {
+        height: auto;
+        margin: 0 0 10px 10px;
+        padding: 0;
+    }
+    
+    
+    
+    /*MAIN KÖNTÄNT!!!!!!!!!!1!1!1!111SHIFT*/
+    .main-container {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 90vh;
+
+
+        display: none;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 15px;
+        width: 23%;
+        height: 95%;
+        margin-top: 1rem;
+        border-radius: 25px;
+    }
+    .container.tre {
+        border: 8px solid var(--peclight);
+    }
+    .container.telia, .tele2, .telenor {
+        border: 8px solid var(--pecred);
+    }
+    /*.container.results {
+        background-color: var(--green);
+        border: 4px solid var(--redder);
+    }*/
+    
+    h3 {
+        color: var(--aqua);
+        font-size: 3.5rem;
+        margin-top: 10px;
+        align-self: flex-start;
+    }
+    label {
+        color: var(--aqua);
+        font-size: 2rem;
+        display: block;
+    }
+    
+    .sel-wrapper {
+        margin: 30px 0 30px 0;
+    }
+    
+    .main-container select, input {
+        width: 25rem;
+    }
+    
+    
+    
+    /*RESULTATBOXAR*/
+    .result-box {
+        color: var(--aqua);
+        font-size: 2rem;
+    }
+    .total-box #telia-totalSum, .total-box #tele2-totalSum, .total-box #telenor-totalSum {
+        display: block;
+        margin-bottom: 15px;
+        color: var(--pecred);
+        font-size: 3rem;
+    }
+    
+    #tre-totalSum, .difference-box #tre-totalSum-24 {
+        display: block;
+        margin-bottom: 15px;
+        color: var(--yellow);
+        font-size: 3rem;
+    }
+    
+    #telia-difference-value, #telia-difference-value-24, #tele2-difference-value, #tele2-difference-value-24, #telenor-difference-value, #telenor-difference-value-24 {
+        display: block;
+        margin-bottom: 15px;
+        color: var(--green);
+        font-size: 3rem;
+    }
+    
+    
+    
+    /*DAYMODE*/
+    body.day-mode, body.day-mode .main-container {
+        background-color: var(--white);
+    }
+    
+    body.day-mode .container.tre {
+        border-color: var(--peclight);
+        color: var(--dark);
+    } 
+    body.day-mode .container.telia, 
+    body.day-mode .container.tele2, 
+    body.day-mode .container.telenor {
+        border-color: var(--pecred);
+        color: var(--dark);
+    }
+    
+    body.day-mode .total-box,
+    body.day-mode .difference-box {
+        background-color: var(--white);
+        color: var(--dark);
+    }
+    
+    body.day-mode label {
+        color: var(--dark);
+    }
+    
+    body.day-mode #tre-totalSum, body.day-mode .difference-box #tre-totalSum-24 {
+        color: var(--dark);
+    }
+    
+    
+    
+    /*LAYOUT*/
+    .info-layout {
+        display: flex;
+        width: 100%;
+    }
+    
+    .info-instructions {
+        width: 50%;
+        margin: 0 25px 0 25px;
+    }
+    
+    .info-update {
+        width: 50%;
+        padding-left: 25px;
+    
+        margin: 0 25px 0 25px;
+    }
+    
+    li {
+        font-size: 2rem;
+        color: var(--peclightalt);
+        padding-bottom: 30px;
+    }
+    
+    h2 {
+        font-size: 3rem;
+        color: var(--pecblue);
+        padding: 0 0 30px 25px;
+    }
+    
+    p {
+        font-size: 2rem;
+        color: var(--peclightalt);
+        padding: 0 0 30px 25px;
+    }
+    
+    a.info-link {
+        color: var(--pecred);
+        text-decoration: none;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    
+    .return-box {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 40px 0;
+    }
+    
+    a.return-btn {
+        background-color: transparent;
+        color: var(--peclightalt);
+        padding: 1rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 2rem;
+        border-radius: 25px;
+        transition-duration: 0.4s;
+        border: 6px solid var(--pecblue);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    a.return-btn:hover {
+        background-color: var(--white);
+        border: 6px solid var(--white);
     }
 }
