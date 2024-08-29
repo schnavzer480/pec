@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Cinzel", serif;
+    letter-spacing: 0.1rem;
 }
 
 :root {
@@ -44,9 +45,7 @@ body {
 
 
 /*NAVBAR!!!!!!!!!!!!!!!*/
-.upDate {
-    color: var(--yellow);
-}
+
 
 nav {
     display: flex;
@@ -70,6 +69,10 @@ h1 {
     font-size: 2.5rem;
     display: flex;
     justify-content: center;
+}
+
+.upDate {
+    color: var(--yellow);
 }
 
 h1[info] {
