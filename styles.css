@@ -66,7 +66,7 @@ nav {
     padding-left: 2rem;
 }
 h1 {
-    color: var(--pecblue);
+    color: var(--peclightalt);
     font-size: 2.5rem;
     display: flex;
     justify-content: center;
