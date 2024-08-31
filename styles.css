@@ -303,6 +303,7 @@ a.info-link {
     display: flex;
     justify-content: center;
     margin: 0 0 40px 0;
+    gap: 10px;
 }
 
 a.return-btn {
