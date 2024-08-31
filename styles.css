@@ -341,25 +341,40 @@ a.return-btn:hover {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: center;
         width: 100%;
-        height: 20vh;
-        margin: 0 0 0 2rem;
+        height: auto;
     }
     
     .nav-buttons {
         display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: space-around;
         height: auto;
-        width: auto;
-        padding-left: 0;
-        margin: 10px 0 10px 0;
+        width: 100%;
+        background-color: var(--lightblue);
     }
 
-    h1 {
-        font-size: 2rem;
-        margin: 0 0 10px 10px;
+    a.nav-btn, #dayModeButton, #resetButton {
+        background-color: transparent;
+        color: var(--peclightalt);
+        padding: 0;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 1.5rem;
+        border-radius: none;
+        transition-duration: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    a.nav-btn:hover, #dayModeButton:hover, #resetButton:hover {
+        background-color: transparent;
+        color: var(--pecred);
+        border: none;
+    }
+
+    h1, .upDate {
+        display: none;
     }
     
     h1[info] {
@@ -383,7 +398,7 @@ a.return-btn:hover {
     
     #world {
         height: auto;
-        margin: 0 0 10px 10px;
+        margin: 0;
         padding: 0;
     }
     
