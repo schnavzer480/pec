@@ -14,7 +14,7 @@ const countriesList = [
 let lastInputValue = '';
 
 function suggestCountry() {
-    const input = document.getElementById('world');
+    const input = document.querySelector('#world');
     let userInput = input.value.trim();
 
     const matchingCountries = countriesList.filter(country =>
