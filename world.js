@@ -58,14 +58,14 @@ function suggestCountry() {
 }
 
 
-document.getElementById('world').addEventListener('input', suggestCountry);
+document.querySelector('#world').addEventListener('input', suggestCountry);
 
-document.getElementById('world').addEventListener('keydown', function(event) {
+document.querySelector('#world').addEventListener('keydown', function(event) {
     if (event.key === 'Backspace' || event.keyCode === 8) {
-        document.getElementById('world').value = lastInputValue;
+        document.querySelector('#world').value = lastInputValue;
 
         if (lastInputValue === '') {
-            document.getElementById('world').classList.remove('valid', 'invalid');
+            document.querySelector('#world').classList.remove('valid', 'invalid');
         }
     }
 });
