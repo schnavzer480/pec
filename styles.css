@@ -43,6 +43,10 @@ body {
     display: none;
 }
 
+.important-news {
+    color: var(--yellow);
+}
+
 
 /*NAVBAR!!!!!!!!!!!!!!!*/
 
