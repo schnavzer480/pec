@@ -56,8 +56,6 @@ function suggestCountry() {
         input.placeholder = '';
     }
 }
-
-
 document.querySelector('#world').addEventListener('input', suggestCountry);
 
 document.querySelector('#world').addEventListener('keydown', function(event) {
