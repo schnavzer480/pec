@@ -15,7 +15,7 @@ let lastInputValue = '';
 
 function suggestCountry() {
     const input = document.querySelector('#world');
-    let userInput = input.value.trim();
+    let userInput = input.value;
 
     const matchingCountries = countriesList.filter(country =>
         country.toLowerCase().startsWith(userInput.toLowerCase())
@@ -27,10 +27,8 @@ function suggestCountry() {
         input.classList.remove('valid', 'invalid');
     } else {
         if (matchingCountries.length > 0) {
-            
             input.style.borderColor = 'green';
         } else {
-            
             input.style.borderColor = 'red';
         }
 
@@ -43,6 +41,7 @@ function suggestCountry() {
                 lastInputValue = userInput;
 
                 input.value = suggestedCountry;
+
                 input.setSelectionRange(userInput.length, input.value.length);
             } else {
                 input.classList.remove('valid');
@@ -56,6 +55,7 @@ function suggestCountry() {
         input.placeholder = '';
     }
 }
+
 document.querySelector('#world').addEventListener('input', suggestCountry);
 
 document.querySelector('#world').addEventListener('keydown', function(event) {
