@@ -66,15 +66,22 @@ nav {
     justify-content: flex-start;
     align-items: center;
     gap: 2rem;
-    width: 80%;
+    width: auto;
     height: 10vh;
     padding-left: 2rem;
 }
 h1 {
     color: var(--peclightalt);
-    font-size: 2rem;
+    font-size: 1.4rem;
     display: flex;
     justify-content: center;
+    align-self: center;
+}
+
+.quote {
+    font-size: 1.5rem;
+    margin: 0 50px 0 30px;
+    color: var(--peclight)
 }
 
 .upDate {
@@ -89,15 +96,17 @@ h1[info] {
 
 .nav-info {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
+    height: auto;
+
+    order: 2px solid red;
 }
 
 .nav-input {
     display: flex;
     justify-content: flex-end;
-    gap: 8rem;
-    width: 20%;
+    width: auto;
     height: 10vh;
     padding-right: 1.5rem;
 }

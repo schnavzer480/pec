@@ -111,7 +111,7 @@
         font-size: 2rem;
     }
     label {
-        font-size: 1rem;
+        font-size: 1.4rem;
         display: block;
     }
     
@@ -123,6 +123,10 @@
         width: 25rem;
     }
     
+    .total-box, .difference-box {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
     
     
     /*RESULTATBOXAR*/
@@ -142,6 +146,11 @@
     #telia-difference-value, #telia-difference-value-24, #tele2-difference-value, #tele2-difference-value-24, #telenor-difference-value, #telenor-difference-value-24 {
         margin-bottom: 0px;
         font-size: 2rem;
+    }
+
+    .nav-buttons {
+        justify-content: flex-start;
+        align-items: center;
     }
     
     
