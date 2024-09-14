@@ -171,4 +171,8 @@
         background-color: var(--white);
         border: 6px solid var(--white);
     }
+
+    blockquote {
+        display: none;
+    }
 }
