@@ -304,3 +304,39 @@ a.return-btn:hover {
     background-color: var(--white);
     border: 6px solid var(--white);
 }
+
+
+/*QUOTE BOX*/
+.quote-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+}
+
+blockquote{
+    max-width: 500px;
+    margin-top: 2rem;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(39, 158, 194, 0.131);
+    border: 1px solid var(--peclight);
+    border-left-width: 10px;
+    height: auto;
+}
+
+.quote{
+    font-style: italic;
+    font-size: 1.5em;
+    line-height: 1.5;
+    color: var(--white);
+}
+
+.author{
+    font-weight: bold;
+    font-style: normal;
+    text-align: right;
+    color: var(--pecred);
+    font-size: 2.5rem;
+}
