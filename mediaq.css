@@ -14,40 +14,17 @@
     
     /*NAVBAR!!!!!!!!!!!!!!!*/
     nav {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
         align-items: center;
-        width: 100%;
-        height: auto;
     }
-    
+
     .nav-buttons {
-        display: flex;
-        justify-content: space-around;
-        height: 3rem;
-        width: 100%;
-        background-color: var(--lightblue);
+        gap: 100px;
     }
 
     a.nav-btn, #dayModeButton, #resetButton {
-        background-color: transparent;
-        color: var(--white);
-        padding: 0;
-        text-transform: uppercase;
-        text-decoration: none;
         font-size: 1.5rem;
-        border-radius: none;
-        transition-duration: none;
-        border: none;
-        cursor: pointer;
     }
     
-    a.nav-btn:hover, #dayModeButton:hover, #resetButton:hover {
-        background-color: transparent;
-        color: var(--pecred);
-        border: none;
-    }
 
     h1, .upDate {
         display: none;
@@ -59,36 +36,18 @@
         font-size: 5rem;
     }
     
-    .nav-info {
-        display: flex;
-        justify-content: flex-start;
-    }
-    
-    .nav-input {
-        height: auto;
-        width: auto;
-        padding: 0;
-        gap: 0;
-    }
     
     #world {
         height: auto;
-        margin: 10px 0 0 0;
-        padding: 0;
-    }
-    
-    input#world {
-        padding-left: 5px;
+        margin: 2px;
     }
     
     
     /*MAIN KÖNTÄNT!!!!!!!!!!1!1!1!111SHIFT*/
     .main-container {
         display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
         width: auto;
-        height: 80vh;
     }
     
     .container {
@@ -96,7 +55,7 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        width: auto;
+        width: 30rem;
         height: auto;
         border-radius: 25px;
     }
