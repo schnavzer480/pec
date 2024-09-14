@@ -24,11 +24,6 @@
     --peclightalt: rgb(39, 158, 194);
 }
 
-/*main, footer {
-    display: block;
-    margin: 0;
-}*/
-
 body {
     background-color: var(--dark);
 }
@@ -36,7 +31,7 @@ body {
 /*.bgimg{
     height: 100%;
     width: 100%;
-    background-image: url("bgimg.webp");
+    background-image: url("../bgimg.webp");
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -234,6 +229,7 @@ h2 {
 .important-news {
     color: var(--yellow);
 }
+
 
 /*LAYOUT*/
 .info-layout {
