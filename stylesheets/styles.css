@@ -13,18 +13,6 @@
 :root {
     font-size: 62.5%;
     
-    --black: rgb(18, 18, 18);
-    
-    --red: rgb(187, 10, 10);
-    
-    --gray: rgb(105, 105, 105);
-
-    --blue: rgba(0,83,106,255);
-    --lightblue: rgba(20,115,143,255);
-    --redder: rgba(164,77,76,255);
-    
-
-    
     --dark: rgba(34,34,34,255);
     --white: #F4F3F2;
     --yellow: rgb(255, 255, 0);
@@ -128,8 +116,6 @@ input:focus {
     width: 100%;
     min-height: 70vh;
     margin-top: 2rem;
-
-    border: 2px solid red;
 }
 
 .container {
@@ -263,7 +249,6 @@ h2 {
 .info-update {
     width: 50%;
     padding-left: 25px;
-
     margin: 0 25px 0 25px;
 }
 
