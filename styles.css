@@ -16,7 +16,7 @@
     --black: rgb(18, 18, 18);
     
     --red: rgb(187, 10, 10);
-    --green: rgb(12, 197, 92);
+    
     --gray: rgb(105, 105, 105);
 
     --blue: rgba(0,83,106,255);
@@ -29,6 +29,7 @@
     --white: #F4F3F2;
     --yellow: rgb(255, 255, 0);
     --aqua: rgb(73, 205, 205);
+    --green: rgb(12, 197, 92);
     --pecred: rgb(153, 33, 29);
     --pecblue: rgb(0, 83, 106);
     --peclight: rgba(20, 116, 144, 255);
@@ -178,21 +179,21 @@ select {
 }
 .total-box #telia-totalSum, .total-box #tele2-totalSum, .total-box #telenor-totalSum {
     display: block;
-    margin-bottom: 15px;
+    margin: 5px 0 15px 0;
     color: var(--pecred);
     font-size: 3rem;
 }
 
 #tre-totalSum, .difference-box #tre-totalSum-24 {
     display: block;
-    margin-bottom: 15px;
+    margin: 5px 0 15px 0;
     color: var(--yellow);
     font-size: 3rem;
 }
 
 #telia-difference-value, #telia-difference-value-24, #tele2-difference-value, #tele2-difference-value-24, #telenor-difference-value, #telenor-difference-value-24 {
     display: block;
-    margin-bottom: 15px;
+    margin: 5px 0 15px 0;
     color: var(--green);
     font-size: 3rem;
 }
