@@ -3,6 +3,7 @@ Simple calculator tool that lets the user quickly compare prices between differe
 
 Updates needed to be done:
 
-dark mode btn
+dark mode btn - DONE
 grid system for mediaQ
 clean js from html
+reset buttons in boxes
