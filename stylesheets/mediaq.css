@@ -9,7 +9,7 @@
     }
 
     a.nav-btn, #dayModeButton, #resetButton {
-        font-size: 2rem;
+        font-size: 0;
     }
     
 
@@ -29,7 +29,17 @@
         margin: 2px 2px 2px 20px;
         width: 15rem;
     }
-    
+
+
+   /*BUTTONS*/
+   .nav-buttons .icon {
+    display: inline;
+    width: 2.5rem;
+    height: auto;
+}
+    /*.nav-buttons button, .nav-buttons a {
+        font-size: 0;
+    }*/
     
     /*MAIN KÖNTÄNT!!!!!!!!!!1!1!1!111SHIFT*/
     .main-container {
@@ -187,10 +197,6 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    }
-
-    #dayModeButton, a.nav-btn {
-        display: none;
     }
 
     #world {

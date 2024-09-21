@@ -67,6 +67,9 @@ a.nav-btn, #dayModeButton, #resetButton {
 a.nav-btn:hover, #dayModeButton:hover, #resetButton:hover {
     color: var(--pecred);
 }
+.nav-buttons .icon {
+    display: none;
+   }
 
 
 .nav-info {
