@@ -1,7 +1,12 @@
 const quotes = [
     { text: "Definitionen av galenskap är att göra samma sak gång på gång, men förvänta sig ett annat resultat.", author: "- Kevin" },
     { text: "Snälla pojkar får inte sälja.", author: "- Per" },
-    { text: "Nu åker vi! NU ÅKER VI!!!!!1!1!1!1!111SHIFT.", author: "- Eric" }
+    { text: "Nu åker vi! NU ÅKER VI!!!!!1!1!1!1!111SHIFT.", author: "- Eric" },
+    {text: "Den som inte är utbränd vid årets slut, den har fuskat!", author: "- Tomas Storm (Snabba Cash)" },
+    {text: "Personlig utveckling och bekvämlighet samexisterar inte.", author: "- Ginni Rometty" },
+    {text: "Det enda som står mellan dig och dina mål är bortförklaringarna till varför du aldrig når dem.", author: "- Jordan Belfort" },
+    {text: "Om du inte kan så måste du, och om du måste så kan du.", author: "- Tony Robbins" },
+    
 ];
 
 let currentIndex = 0;
