@@ -2,20 +2,16 @@
     /*NAVBAR!!!!!!!!!!!!!!!*/
     nav {
         align-items: center;
-
-        border: 2px solid red;
     }
 
     .nav-buttons {
         gap: 20rem;
-
-        border: 2px solid blue;
     }
 
     a.nav-btn, #dayModeButton, #resetButton {
         font-size: 0;
     }
-    
+
 
     h1, .upDate {
         display: none;
@@ -209,8 +205,6 @@
 
     .nav-buttons {
         gap: 8rem;
-
-        border: 2px solid blue;
     }
 }
 
