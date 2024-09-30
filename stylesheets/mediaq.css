@@ -2,10 +2,14 @@
     /*NAVBAR!!!!!!!!!!!!!!!*/
     nav {
         align-items: center;
+
+        border: 2px solid red;
     }
 
     .nav-buttons {
-        gap: 8rem;
+        gap: 20rem;
+
+        border: 2px solid blue;
     }
 
     a.nav-btn, #dayModeButton, #resetButton {
@@ -201,6 +205,12 @@
 
     #world {
         width: 15rem;
+    }
+
+    .nav-buttons {
+        gap: 8rem;
+
+        border: 2px solid blue;
     }
 }
 
