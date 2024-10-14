@@ -29,4 +29,5 @@ let currentIndex = 0;
     updateQuote();
 
     //5 minuter = 300,000 ms
-    setInterval(updateQuote, 300000);
+    //3 minuter = 180.000 ms
+    setInterval(updateQuote, 180000);
