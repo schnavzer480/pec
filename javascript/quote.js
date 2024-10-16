@@ -11,7 +11,9 @@ const quotes = [
     { text: "Du missar 100% av skotten du inte skjuter.", author: "- Wayne Gretzky" },
     { text: "Man ska inte göra sitt bästa. Man ska göra det som krävs.", author: "- Mikael Arndt" },
     { text: "Hopp är ingen strategi.", author: "- August Walker (Mission Impossible VI)" },
-    { text: "Har du vaknat?! Mata på! Mata på! Mata på!", author: "- John Andreas" }
+    { text: "Har du vaknat?! Mata på! Mata på! Mata på!", author: "- John Andreas" },
+    { text: 'Varje gång jag ska in i GetAccept, och skriver in "get" och trycker Enter, så kommer jag till en &#128016;.', author: "- Sebbe"},
+    { text: "Telia är inte en operatör, det är en kult.", author: "- Christutter"}
 ];
 
 let currentIndex = 0;
@@ -20,8 +22,8 @@ let currentIndex = 0;
         const quoteElement = document.querySelector('#quote-block .quote');
         const authorElement = document.querySelector('#quote-block .author');
         
-        quoteElement.textContent = quotes[currentIndex].text;
-        authorElement.textContent = quotes[currentIndex].author;
+        quoteElement.innerHTML = quotes[currentIndex].text;
+        authorElement.innerHTML = quotes[currentIndex].author;
 
         currentIndex = (currentIndex + 1) % quotes.length;
     }
