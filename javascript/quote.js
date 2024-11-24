@@ -17,23 +17,39 @@ const quotes = [
     { text: "Varje missnöjd kund hotar din anställning.", author: "- Okänd"},
     { text: "Kunden är orsak till att du har ett arbete.", author: "- Okänd"},
     { text: "Ingen blir någonsin belönad för sin negativa inställning.", author: "- Okänd"},
-    { text: "Du kan inte ändra vinden, men du kan trimma seglen", author: "- Okänd"},
-    { text: "Människan består av 65% vatten, resten inställning", author: "- Okänd"}
+    { text: "Du kan inte ändra vinden, men du kan trimma seglen.", author: "- Okänd"},
+    { text: "Människan består av 65% vatten, resten inställning.", author: "- Okänd"}
 ];
 
+let shuffledQuotes = [];
 let currentIndex = 0;
 
-    function updateQuote() {
-        const quoteElement = document.querySelector('#quote-block .quote');
-        const authorElement = document.querySelector('#quote-block .author');
-        
-        quoteElement.innerHTML = quotes[currentIndex].text;
-        authorElement.innerHTML = quotes[currentIndex].author;
+function shuffleQuotes() {
+    shuffledQuotes = quotes.slice();
+    for (let i = shuffledQuotes.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffledQuotes[i], shuffledQuotes[j]] = [shuffledQuotes[j], shuffledQuotes[i]];
+    }
+}
 
-        currentIndex = (currentIndex + 1) % quotes.length;
+function updateQuote() {
+    const quoteElement = document.querySelector('#quote-block .quote');
+    const authorElement = document.querySelector('#quote-block .author');
+
+    if (currentIndex >= shuffledQuotes.length) {
+        shuffleQuotes();
+        currentIndex = 0;
     }
 
-    updateQuote();
+    const currentQuote = shuffledQuotes[currentIndex];
+    quoteElement.innerHTML = currentQuote.text;
+    authorElement.innerHTML = currentQuote.author;
+
+    currentIndex++;
+}
+
+shuffleQuotes();
+updateQuote();
 
     //5 minuter = 300,000 ms
     //3 minuter = 180.000 ms
