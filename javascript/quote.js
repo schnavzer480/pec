@@ -18,7 +18,8 @@ const quotes = [
     { text: "Kunden är orsak till att du har ett arbete.", author: "- Okänd"},
     { text: "Ingen blir någonsin belönad för sin negativa inställning.", author: "- Okänd"},
     { text: "Du kan inte ändra vinden, men du kan trimma seglen.", author: "- Okänd"},
-    { text: "Människan består av 65% vatten, resten inställning.", author: "- Okänd"}
+    { text: "Människan består av 65% vatten, resten inställning.", author: "- Okänd"},
+    {text: "Du är BRUTAL MAGNIFIK FANTASTISK", author: "- John Andreas"}
 ];
 
 let shuffledQuotes = [];
