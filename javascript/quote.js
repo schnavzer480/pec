@@ -12,14 +12,15 @@ const quotes = [
     { text: "Man ska inte göra sitt bästa. Man ska göra det som krävs.", author: "- Mikael Arndt" },
     { text: "Hopp är ingen strategi.", author: "- August Walker (Mission Impossible VI)" },
     { text: "Har du vaknat?! Mata på! Mata på! Mata på!", author: "- John Andreas" },
-    { text: 'Varje gång jag ska in i GetAccept, och skriver in "get" och trycker Enter, så kommer jag till en &#128016;.', author: "- Sebbe"},
+    { text: 'Varje gång jag ska in i GetAccept, och skriver in "get" och trycker Enter, så kommer jag till en &#128016;.', author: "- Sebastian Carlsson"},
     { text: "Telia är inte en operatör, det är en kult.", author: "- Christutter"},
     { text: "Varje missnöjd kund hotar din anställning.", author: "- Okänd"},
     { text: "Kunden är orsak till att du har ett arbete.", author: "- Okänd"},
     { text: "Ingen blir någonsin belönad för sin negativa inställning.", author: "- Okänd"},
     { text: "Du kan inte ändra vinden, men du kan trimma seglen.", author: "- Okänd"},
     { text: "Människan består av 65% vatten, resten inställning.", author: "- Okänd"},
-    {text: "Du är BRUTAL MAGNIFIK FANTASTISK", author: "- John Andreas"}
+    {text: "Du är BRUTAL MAGNIFIK FANTASTISK", author: "- John Andreas"},
+    {text: "Det är helt ok att nolla om man är glad", author: "- Philip Heder"}
 ];
 
 let shuffledQuotes = [];
