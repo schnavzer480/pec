@@ -339,3 +339,7 @@ blockquote{
     color: var(--aqua);
     font-size: 2rem;
 }
+
+.pec-info{
+    font-size: 1.2rem;
+}
