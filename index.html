@@ -30,7 +30,7 @@
                 </a>
             </div>
             <div class="nav-info">
-                <h1>Tre priskalkulator, uppdaterad<span class="upDate">&nbsp;29/12</span></h1>
+                <h1>Tre priskalkulator, uppdaterad<span class="upDate">&nbsp;5/1</span></h1>
             </div>
             <div class="nav-input">
                 <label for="world"></label>
@@ -41,7 +41,7 @@
     <main>
         <div class="main-container">
             <div class="container tre">
-                <h3>Tre <span class="pec-info">(jag programmerar process för att man ska kunna styra priset på EA själv, när jag listat ut hur man gör just det typish innan den 7:e)</span></h3>
+                <h3>Tre</h3>
                 <div class="form-container">
                     <form id="treForm">
                         <div class="sel-wrapper">
@@ -56,14 +56,18 @@
                             </select>
                         </div>
                         <div class="sel-wrapper">
-                            <label for="tre-second">Extra användare:</label>
-                            <select id="tre-second" name="second" onchange="calculateTotals()">
+                            <label for="extra-user-price">Extra anv. pris:</label>
+                            <input type="number" id="extra-user-price" placeholder="Pris" onchange="updateExtraUserCost()">
+                        </div>
+                        <div class="sel-wrapper">
+                            <label for="extra-user-amount">Antal extra anv.:</label>
+                            <select id="extra-user-amount" onchange="updateExtraUserCost()">
                                 <option value="0">-</option>
-                                <option value="99">1 | 99sek</option>
-                                <option value="198">2 | 198sek</option>
-                                <option value="297">3 | 297sek</option>
-                                <option value="396">4 | 396sek</option>
-                                <option value="495">5 | 495sek</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
                             </select>
                         </div>
                         <div class="sel-wrapper">
@@ -98,11 +102,13 @@
                         <div class="result-box">
                             <div class="total-box">
                                 Månadskostnad:<span id="tre-totalSum">0</span>
+                                <span id="tre-extra-user-cost" style="display: none;">0</span>
                             </div>
                             <div class="difference-box">
                                 Kostnad 24 månader:<span id="tre-totalSum-24">0</span>
                             </div>
                         </div>
+                        
                     </form>
                 </div>
             </div>
