@@ -47,7 +47,7 @@
     </div>
     <p>Klicka dig fram till korrekt kundnummer för kunden.</p>
     <form>
-        <input type="text" id="customerNumber" maxlength="5" placeholder="00000">
+        <input type="text" id="customerNumber" maxlength="5" placeholder="00000" readonly>
         <button type="button" onclick="randomizeNumber()">Kundnummer</button>
     </form></br>
     <button onclick="saveCustomerNumber()">Fortsätt</button>
@@ -64,7 +64,7 @@
                 sessionStorage.setItem('customerNumber', customerNumber);
                 window.location.href = "tre3.html";
             } else {
-                alert("Kundnummer");
+                alert("Please use the Kundnummer button to generate a valid 5-digit customer number.");
             }
         }
     </script>
