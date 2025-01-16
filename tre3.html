@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Price calculator for TM">
+    <meta name="author" content="Christoffer Jonsson">
+    <link href="../stylesheets/styles.css" rel="stylesheet">
+    <link href="../stylesheets/info.css" rel="stylesheet">
+    <title>Räkna med Kevin</title>
+    <meta name="theme-color" content="#147490">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        #sliderContainer {
+            width: 90%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #dateSlider {
+            width: 100%;
+        }
+        #dateDisplay {
+            margin-top: 20px;
+            font-size: 18px;
+            color: red;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #trickyButton {
+            font-size: 24px;
+            padding: 15px 30px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        .btn-flex {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .return-btn {
+            width: 400px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="info-header">
+        <h1 info>Ånger</h1><br/>
+    </div>
+    <div class="btn-flex"><a class="return-btn" href="index.html">Ge upp och kör en winback på kund</a></div>
+    <button id="trickyButton" onclick="handleClick()">Bekräfta ånger</button>
+
+    <script>
+        const button = document.getElementById('trickyButton');
+        const moveThreshold = 200;
+
+        document.addEventListener('mousemove', function(event) {
+            const buttonRect = button.getBoundingClientRect();
+            const buttonCenterX = buttonRect.left + buttonRect.width / 2;
+            const buttonCenterY = buttonRect.top + buttonRect.height / 2;
+            const distanceX = Math.abs(event.clientX - buttonCenterX);
+            const distanceY = Math.abs(event.clientY - buttonCenterY);
+
+            if (distanceX < moveThreshold && distanceY < moveThreshold) {
+                const offsetX = (buttonCenterX - event.clientX) * 1.5;
+                const offsetY = (buttonCenterY - event.clientY) * 1.5;
+                const newLeft = Math.min(window.innerWidth - buttonRect.width, Math.max(0, buttonRect.left + offsetX));
+                const newTop = Math.min(window.innerHeight - buttonRect.height, Math.max(0, buttonRect.top + offsetY));
+
+                button.style.transform = `translate(${newLeft - buttonRect.left}px, ${newTop - buttonRect.top}px)`;
+            }
+        });
+
+        function handleClick() {
+            alert("Fel datum, var god rätta till!");
+            window.location.href = "tre.html";
+        }
+    </script>
+
+</body>
+
+</html>

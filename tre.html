@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Price calculator for TM">
+    <meta name="author" content="Christoffer Jonsson">
+    <link href="../stylesheets/styles.css" rel="stylesheet">
+    <link href="../stylesheets/info.css" rel="stylesheet">
+    <title>Räkna med Kevin</title>
+    <meta name="theme-color" content="#147490">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        #sliderContainer {
+            width: 90%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #dateSlider {
+            width: 100%;
+        }
+        #dateDisplay {
+            margin-top: 20px;
+            font-size: 18px;
+            color: red;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="info-header">
+        <h1 info>Ånger</h1>
+    </div>
+    <p>In case of ånger, för in kundens uppgifter i formulären nedan.</p>
+    <div id="sliderContainer">
+        <input type="range" id="dateSlider" min="0" max="73049" step="1">
+    </div>
+    <div id="dateDisplay">Vilket datum ångrade kunden sig? Ställ in korrekt datum i slidern.</div><br/>
+    <button onclick="saveDate()">Fortsätt</button>
+
+    <script>
+        const slider = document.getElementById('dateSlider');
+        const dateDisplay = document.getElementById('dateDisplay');
+        const startDate = new Date(1900, 0, 1);
+        const endDate = new Date(2100, 11, 31);
+        const daysRange = (endDate - startDate) / (1000 * 60 * 60 * 24);
+
+        slider.addEventListener('input', function() {
+            const selectedDate = new Date(startDate.getTime() + this.value * 1000 * 60 * 60 * 24);
+            dateDisplay.textContent = `Kunden ångrade sig: ${selectedDate.toISOString().split('T')[0]}`;
+        });
+
+        function saveDate() {
+            const selectedDate = new Date(startDate.getTime() + slider.value * 1000 * 60 * 60 * 24);
+            alert(`Datum sparat: ${selectedDate.toISOString().split('T')[0]}`);
+            window.location.href = "tre2.html";
+        }
+    </script>
+
+</body>
+
+</html>
