@@ -21,7 +21,8 @@ const quotes = [
     { text: "Människan består av 65% vatten, resten inställning.", author: "- Okänd"},
     {text: "Du är BRUTAL MAGNIFIK FANTASTISK", author: "- John Andreas"},
     {text: "Det är helt ok att nolla om man är glad", author: "- Philip Heder"},
-    {text: "Nederlag är bara ett tankesätt, skaka av dig det och fortsätt kämpa", author: "- UK Team Leader, Call of Duty"}
+    {text: "Nederlag är bara ett tankesätt, skaka av dig det och fortsätt kämpa", author: "- UK Team Leader, Call of Duty"},
+    {text: "I wake up and piss excelence", author: "- Master Chief"}
 ];
 
 let shuffledQuotes = [];
